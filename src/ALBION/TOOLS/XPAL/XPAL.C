@@ -38,6 +38,18 @@ void Main_error_output_function(UNCHAR * buffer);
 
 /* yo-ho */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : main
+ * FUNCTION  : Main function of XPAL (extract the palette of an LBM file).
+ * FILE      : XPAL.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : int argc, char** argv - Program arguments.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 main(int argc, char** argv)
 {
@@ -193,6 +205,18 @@ LBM_FindChunk( struct LBM * lbmptr, UNCHAR chunk[4] )
 }
 
 /* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Main_error_output_function
+ * FUNCTION  : Print an error message of the libraries.
+ * FILE      : XPAL.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR * buffer - Pointer to error message.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void
 Main_error_output_function(UNCHAR * buffer)

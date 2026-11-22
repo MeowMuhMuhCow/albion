@@ -49,7 +49,7 @@ enum { BLEV_BUFFER_EMPTY, BLEV_EVENT_IN_BUFFER, BLEV_BUFFER_FULL } en_bufferstat
  ******************************************************************************
  * #FUNCTION HEADER BEGIN#
  * NAME     : BLEV_Init
- * FUNCTION : 
+ * FUNCTION : Initialize the event library (event buffer, mouse and keyboard).
  * FILE     : D:\PCLIB32\SRC\BBEVENT\BBEVENT.C
  * AUTHOR   : Rainer Reber
  * FIRST    : 13.06.95 00:16:56
@@ -112,7 +112,7 @@ SILONG BLEV_Init( void )
  ******************************************************************************
  * #FUNCTION HEADER BEGIN#
  * NAME     : BLEV_Exit
- * FUNCTION :
+ * FUNCTION : Exit the event library.
  * FILE     : D:\PCLIB32\SRC\BBEVENT\BBEVENT.C
  * AUTHOR   : Rainer Reber
  * FIRST    : 13.06.95 00:16:28
@@ -218,7 +218,7 @@ void BLEV_ClearAllEvents( void )
 /* #FUNCTION BEGIN# */
 
 #pragma off (check_stack)
-/* BLEV_PutEvent: put an event into the event buffer */
+
 SILONG BLEV_PutEvent( struct BLEV_Event_struct		*p_event )
 {
 
@@ -368,12 +368,23 @@ void BLEV_GetMousePos(struct BBPOINT *pnt)
 
 /* #FUNCTION END# */
 
-/* Tastaturabfrage ueber das BIOS (im Original am Ende dieses Moduls, 0x88b83) */
+/* Keyboard input through the BIOS (in the original at the end of this module, 0x88b83) */
 
 #include <bios.h>
 
 UNSHORT BLEV_Key_table[128];
-/* BLEV_Check_keyboard: read pending keys through the BIOS and turn them into events */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BLEV_Check_keyboard
+ * FUNCTION  : Read pending keys through the BIOS and turn them into events.
+ * FILE      : BBEVENT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 BLEV_Check_keyboard(void)
 {
@@ -430,7 +441,18 @@ BLEV_Check_keyboard(void)
 		}
 	}
 }
-/* BLEV_Init_keyboard: fill the scan code table for the BIOS keyboard */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : BLEV_Init_keyboard
+ * FUNCTION  : Fill the scan code table for the BIOS keyboard.
+ * FILE      : BBEVENT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 BLEV_Init_keyboard(void)
 {

@@ -531,7 +531,20 @@ Init_InputNr_object(struct Object *Object, union Method_parms *P)
 
 	return 0;
 }
-/* Print_broken_number: format a value in tenths as "x.y" */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Print_broken_number
+ * FUNCTION  : Format a value in tenths as "x.y".
+ * FILE      : INPUTNR.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *String - Pointer to destination string.
+ *             SILONG Value - Value in tenths.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
+#line 535
 void
 Print_broken_number(UNCHAR *String, SILONG Value)
 {

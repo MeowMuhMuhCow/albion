@@ -551,7 +551,20 @@ Cast_spell(UNSHORT Member_nr, UNSHORT Source_item_slot_index)
 		Perform_action(&Cast_spell_action);
 	}
 }
-/* Do_cast_spell: event action - cast a spell through the handler list of its class */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_cast_spell
+ * FUNCTION  : Event action: cast a spell through the handler list of its
+ *              class.
+ * FILE      : MAGIC.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Event_action *Action - Pointer to event action data.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
+#line 555
 BOOLEAN
 Do_cast_spell(struct Event_action *Action)
 {

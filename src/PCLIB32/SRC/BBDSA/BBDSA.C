@@ -151,7 +151,7 @@ DSA_Init( void )
  ******************************************************************************
  * #FUNCTION HEADER BEGIN#
  * NAME      : DSA_Exit
- * FUNCTION  :
+ * FUNCTION  : Exit the DSA screen library (closes a screen that is still open).
  * FILE      : BBDSA.C
  * AUTHOR    : R.Reber
  * FIRST     : 25.05.94 14:00
@@ -234,7 +234,19 @@ static struct VESAMODEDEF vmodes[]=
 	{1280,1024,1,0x0107,VESAMD,DOUBLEBF},
 	{0,0,0,0,0,0}
 };
-/* DSA_OpenScr: open a screen for an OPM (VGA, chain-4 or VESA mode) */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : DSA_OpenScr
+ * FUNCTION  : Open a screen for an OPM (VGA, chain-4 or VESA mode).
+ * FILE      : BBDSA.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct OPM * opmptr - Pointer to base OPM.
+ *             UNLONG type - Screen type.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
 BOOLEAN
 DSA_OpenScr(struct OPM * opmptr, UNLONG type)
 {

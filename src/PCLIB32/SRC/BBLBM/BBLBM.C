@@ -57,6 +57,19 @@ struct LBM
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LBM_FindChunk
+ * FUNCTION  : Search a chunk in an LBM file in memory.
+ * FILE      : BBLBM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct LBM * lbmptr - Pointer to LBM data.
+ *             UNCHAR chunk[4] - Four-character chunk name.
+ * RESULT    : UNBYTE * : Pointer to the chunk / NULL (not found).
+ * #FUNCTION HEADER END#
+ */
+
 UNBYTE *LBM_FindChunk( struct LBM * lbmptr, UNCHAR chunk[4] )
 {
 	/* locals */
@@ -115,6 +128,20 @@ UNBYTE *LBM_FindChunk( struct LBM * lbmptr, UNCHAR chunk[4] )
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LBM_GetPal
+ * FUNCTION  : Copy the colour palette (CMAP chunk) of an LBM file into a
+ *              palette.
+ * FILE      : BBLBM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct LBM * lbmptr - Pointer to LBM data.
+ *             struct BBPALETTE * palptr - Pointer to target palette.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void LBM_GetPal( struct LBM * lbmptr, struct BBPALETTE * palptr )
 {
@@ -180,6 +207,20 @@ void LBM_GetPal( struct LBM * lbmptr, struct BBPALETTE * palptr )
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LBM_DisplayLBMinOPM
+ * FUNCTION  : Unpack the picture of an LBM file into an OPM (packed or
+ *              unpacked body).
+ * FILE      : BBLBM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct LBM * lbmptr - Pointer to LBM data.
+ *             struct OPM * opmptr - Pointer to target OPM.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void LBM_DisplayLBMinOPM( struct LBM * lbmptr, struct OPM * opmptr )
 {

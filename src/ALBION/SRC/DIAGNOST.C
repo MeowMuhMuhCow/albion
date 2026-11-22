@@ -1210,8 +1210,20 @@ Save_screen(UNCHAR *Filename)
 
 
 #if FALSE
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Display_modifications
+ * FUNCTION  : List all map modifications for one map (diagnostic output).
+ * FILE      : DIAGNOST.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNSHORT Map_nr - Map number.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
-Display_modifications(UNSHORT Map_nr)  /* Display_modifications: list all map modifications for one map (diagnostic output) */
+Display_modifications(UNSHORT Map_nr)
 {
 	struct Modification_list *List;
 	MEM_HANDLE Handle;
@@ -1266,7 +1278,19 @@ BOOLEAN Recording_flic = FALSE;
 static struct OPM First_OPM, Previous_OPM, Input_OPM;
 static MEM_HANDLE First_OPM_handle, Previous_OPM_handle, Input_OPM_handle;
 static MEM_HANDLE Output_handle;
-/* Start_flic_recording: allocate frame buffers and start recording the screen as a FLIC file */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Start_flic_recording
+ * FUNCTION  : Allocate frame buffers and start recording the screen as a FLIC
+ *              file.
+ * FILE      : DIAGNOST.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNBYTE *Filename - Name of the FLIC file.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Start_flic_recording(UNBYTE *Filename)
 {
@@ -1308,7 +1332,18 @@ Start_flic_recording(UNBYTE *Filename)
 
 	Recording_flic = TRUE;
 }
-/* Stop_flic_recording: finish the FLIC recording and free its buffers */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Stop_flic_recording
+ * FUNCTION  : Finish the FLIC recording and free its buffers.
+ * FILE      : DIAGNOST.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Stop_flic_recording(void)
 {
@@ -1330,8 +1365,20 @@ Stop_flic_recording(void)
 #endif
 
 #ifdef URGLE
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Urgle
+ * FUNCTION  : Play back the last recorded FLIC file (test function).
+ * FILE      : DIAGNOST.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
-Urgle(void)  /* Urgle: play back the last recorded FLIC file (test function) */
+Urgle(void)
 {
 	struct Flic_playback FLC;
 	UNSHORT i;
@@ -1361,8 +1408,20 @@ Urgle(void)  /* Urgle: play back the last recorded FLIC file (test function) */
 #endif
 
 #if FALSE
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Record_flic_frame
+ * FUNCTION  : Add the current screen to the FLIC recording.
+ * FILE      : DIAGNOST.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
-Record_flic_frame(void)  /* Record_flic_frame: add the current screen to the FLIC recording */
+Record_flic_frame(void)
 {
 	if (Recording_flic)
 	{

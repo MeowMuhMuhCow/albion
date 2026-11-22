@@ -338,7 +338,19 @@ Take_item_from_character(MEM_HANDLE Char_handle, UNSHORT Slot_index,
 
 	return Result;
 }
-/* Do_take_item_from_char: event action - take an item from a character */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_take_item_from_char
+ * FUNCTION  : Event action: take an item from a character.
+ * FILE      : ITMLOGIC.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Event_action *Action - Pointer to event action data.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
+#line 342
 BOOLEAN
 Do_take_item_from_char(struct Event_action *Action)
 {
@@ -511,7 +523,19 @@ Put_item_in_character(MEM_HANDLE Char_handle, UNSHORT Slot_index,
 
 	return Result;
 }
-/* Do_put_item_in_char: event action - put an item into a character's inventory */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_put_item_in_char
+ * FUNCTION  : Event action: put an item into a character's inventory.
+ * FILE      : ITMLOGIC.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Event_action *Action - Pointer to event action data.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
+#line 515
 BOOLEAN
 Do_put_item_in_char(struct Event_action *Action)
 {

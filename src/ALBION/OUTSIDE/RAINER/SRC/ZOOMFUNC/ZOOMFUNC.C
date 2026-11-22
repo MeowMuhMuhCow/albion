@@ -21,6 +21,22 @@ extern SILONG ZOOMFUNC_DESTCLIPY1;
 
 
 /*** Put masked Block simulieren */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Put_masked_block
+ * FUNCTION  : Put a masked (transparent) block in an OPM through a temporary
+ *              OPM.
+ * FILE      : ZOOMFUNC.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct OPM *opm - Pointer to target OPM.
+ *             SILONG x, SILONG y - Target coordinates.
+ *             SILONG width, SILONG height - Size of the block.
+ *             UNBYTE *gfxptr - Pointer to graphics.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 static void Put_masked_block(struct OPM *opm, SILONG x, SILONG y, SILONG width, SILONG height, UNBYTE *gfxptr)
 {
 	struct OPM gfxopm;

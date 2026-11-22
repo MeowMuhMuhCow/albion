@@ -12,7 +12,7 @@ Man übersetzt den Quelltext mit dem historischen **Watcom C 10.0a**, assemblier
 | **Compiler** | Watcom C 10.0a `wcc386`, Debug-Build: `-w1 -d2 -od -5r` (schnelle Module `-ox`) |
 | **Assembler / Linker** | MASM 6.0 (`ml /c /Cx`), Watcom wlink 10.0, DOS/4GW |
 | **Übersetzungseinheiten** | 109 C-Einheiten (Spiel und Blue-Byte-Bibliothek PCLIB32), dazu Assemblerteile und Watcom-Laufzeit |
-| **Funktionen** | rund 2.170, fast alle mit Originalnamen, mit Beschreibung im Quelltext |
+| **Funktionen** | rund 2.170 in `MAIN.EXE`, fast alle mit Originalnamen; jede mit Funktionskopf (Zweck, Eingaben, Rückgabe), Übersicht in [`KATALOG.md`](KATALOG.md) |
 | **Übereinstimmung** | 100 %: alle 8 LE-Objekte, Kopf und Fixup-Tabelle; md5 gleich, auch bei einem Bau ohne Zwischenspeicher |
 
 > **Wichtig:** Dieses Repository enthält **keine Spieldaten**, **keine `MAIN.EXE`**, **keinen Compiler** und **nicht** die Rekonstruktion der Miles-Soundbibliothek AIL 3.03 (fremder, kommerzieller Code). Zum Nachbauen braucht man eine eigene legale Kopie von *Albion* (z. B. von [GOG.com](https://www.gog.com/en/game/albion)). Siehe [`RECHTE.md`](RECHTE.md).
@@ -37,12 +37,37 @@ Einige Befunde unterwegs:
 |---|---|
 | `src/ALBION/` | Spiel: `SRC/` (Module), `LIB/` (Kopfdateien), `OUTSIDE/` (Fremdteile, z. B. `ZOOM.ASM`) |
 | `src/PCLIB32/` | Blue-Byte-Bibliothek PCLIB32 (Speicher, Grafik/OPM, DSA, Ereignisse, DOS, System) |
+| `KATALOG.md` | Funktionskatalog: was jede Quelldatei im Spiel macht und was jede Funktion tut |
 | `Werkzeuge/` | Bauwerkzeuge (Python, Shell), Linkfolge, OMF-/LE-Werkzeuge |
 | `MORGEN.sh` | kompletter Bau in 10 Stufen (OBJs, Daten, Karte, AIL, Assembler, wlink, Vergleich) |
 | `WAECHTER.sh` | startet Bauläufe über eine Auftragsdatei (`Bau/auftrag/start`) |
 | `Analyse/MD5_MEILENSTEIN.md` | Abschlussbericht: was echte Befunde sind und was Krücken |
 | `Analyse/NACHT_LOG.md` | Arbeitsprotokoll |
 | `Analyse/ERSTE_BILANZ.md` | erste Messung und Eichung des Compilers |
+
+## Funktionen verstehen
+
+Jede Funktion hat im Quelltext einen Kopf im Stil von Blue Byte:
+
+```c
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_Chest
+ * FUNCTION  : Enter Chest screen.
+ * INPUTS    : UNSHORT Locked_percentage - Locked percentage (100 = cannot
+ *              be picked).
+ *             ...
+ * RESULT    : UNSHORT : Chest status (see CHEST.H).
+ * #FUNCTION HEADER END#
+ */
+```
+
+Rund 2.090 dieser Köpfe sind Originale der Entwickler. Für die übrigen knapp 180 Funktionen gab es keinen Kopf. Sie haben bei der Rekonstruktion einen bekommen, erkennbar an `AUTHOR : - (no original header; written for the reconstruction)`.
+
+[`KATALOG.md`](KATALOG.md) fasst alles zusammen: je Quelldatei ein Satz, was das Modul im Spiel macht, und darunter alle Funktionen mit Zweck und Zeilennummer.
+
+**Warum manchmal `#line` hinter einem Kopf steht:** Viele Module übergeben mit Makros wie `Error()` die Zeilennummer (`__LINE__`) an die Fehlerbehandlung, und diese Zahl landet in der EXE. Ein neuer Kommentarblock würde alle folgenden Nummern verschieben und `MAIN.EXE` wäre nicht mehr bytegleich. Die `#line`-Zeile stellt die Originalnummerierung wieder her.
 
 ## Krücken (offengelegt)
 

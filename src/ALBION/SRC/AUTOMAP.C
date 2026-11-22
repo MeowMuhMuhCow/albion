@@ -297,7 +297,19 @@ Enter_Automap(UNSHORT Function_flags)
 		Perform_action(&Enter_automap_action);
 	}
 }
-/* Do_enter_automap: event action - open the automap */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_enter_automap
+ * FUNCTION  : Event action: open the automap.
+ * FILE      : AUTOMAP.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Event_action *Action - Pointer to event action data.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
+#line 301
 BOOLEAN
 Do_enter_automap(struct Event_action *Action)
 {

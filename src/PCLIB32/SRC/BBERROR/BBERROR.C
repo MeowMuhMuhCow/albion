@@ -462,7 +462,7 @@ ERROR_PrintAllErrors( UNSHORT flagset )
  ******************************************************************************
  * #FUNCTION HEADER BEGIN#
  * NAME      : BBERROR_LocalPrintError
- * FUNCTION  :
+ * FUNCTION  : Format an internal error of the error library ("INTERNAL ERROR: ...").
  * FILE      : BBERROR.C
  * INPUTS    : None.
  * RESULT    : None.

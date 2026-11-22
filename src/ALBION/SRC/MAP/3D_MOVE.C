@@ -1536,7 +1536,21 @@ Try_3D_move(SILONG X, SILONG Y, SILONG dX, SILONG dY, UNSHORT NPC_index,
 
 	return Result;
 }
-/* Get_3D_edge_area: classify a position inside a 3D map square as centre or edge area */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Get_3D_edge_area
+ * FUNCTION  : Classify a position inside a 3D map square as centre or edge
+ *              area.
+ * FILE      : 3D_MOVE.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNSHORT Square_X - X-coordinate inside map square.
+ *             UNSHORT Square_Z - Z-coordinate inside map square.
+ * RESULT    : UNSHORT : Area (0...8). X part (0 = low edge, 1 = centre, 2 =
+ *              high edge) plus 3 x Z part.
+ * #FUNCTION HEADER END#
+ */
+
 UNSHORT
 Get_3D_edge_area(UNSHORT Square_X, UNSHORT Square_Z)
 {

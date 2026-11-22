@@ -58,7 +58,22 @@
 
 #define SHOW_SAMENKORN_MIN_SIZE 20
 #define SHOW_SAMENKORN_MAX_SIZE 80
-/* show_samenkorn: combat effect - let a seed fly from the caster to a target position */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : show_samenkorn
+ * FUNCTION  : Combat effect: let a seed fly from the caster to a target
+ *              position.
+ * FILE      : COMMAG0.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNSHORT Strength - Strength of spell (1...100).
+ *             SILONG zx - Target X-coordinate (3D).
+ *             SILONG zy - Target Y-coordinate (3D).
+ *             SILONG zz - Target Z-coordinate (3D).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void show_samenkorn(UNSHORT Strength,SILONG zx,SILONG zy,SILONG zz)
 {
 	MEM_HANDLE korn_handle = NULL;
@@ -129,14 +144,29 @@ void show_samenkorn(UNSHORT Strength,SILONG zx,SILONG zy,SILONG zz)
 
 #define C0_Spell_1_MIN_SPARKS 100
 #define C0_Spell_1_MAX_SPARKS 200
-/* C0_Spell_1_handler: class 0 spell 1 - apply to every target */
+
 void
 C0_Spell_1_handler(UNSHORT Strength)
 {
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C0_Spell_1);
 }
-/* Do_C0_Spell_1: class 0 spell 1 - effect on one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C0_Spell_1
+ * FUNCTION  : Class 0 spell 1: effect on one target.
+ * FILE      : COMMAG0.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C0_Spell_1(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -319,7 +349,23 @@ C0_Spell_4_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C0_Spell_4);
 }
-/* Do_C0_Spell_4: class 0 spell 4 - magic effect on a party member and a temporary effect */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C0_Spell_4
+ * FUNCTION  : Class 0 spell 4: magic effect on a party member and a temporary
+ *              effect.
+ * FILE      : COMMAG0.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C0_Spell_4(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -358,7 +404,7 @@ Do_C0_Spell_4(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
 /* #FUNCTION BEGIN# */
 
 #define C0_5_COMBAT_FIELDS (5*6)
-/* C0_Spell_5_handler: class 0 spell 5 - halos on all combat fields */
+
 void
 C0_Spell_5_handler(UNSHORT Strength)
 {
@@ -499,14 +545,29 @@ C0_Spell_5_handler(UNSHORT Strength)
 #define C0_Spell_6_MAX_SIZE_EIS 30
 
 static struct COMOB *eis_COMOB[C0_6_MAX_EIS];
-/* C0_Spell_6_handler: class 0 spell 6 - apply to every target */
+
 void
 C0_Spell_6_handler(UNSHORT Strength)
 {
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C0_Spell_6);
 }
-/* Do_C0_Spell_6: class 0 spell 6 - ice effect on one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C0_Spell_6
+ * FUNCTION  : Class 0 spell 6: ice effect on one target.
+ * FILE      : COMMAG0.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C0_Spell_6(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -786,7 +847,7 @@ leavelop1c06:
 
 #define C0_Spell_7_MIN_SNOW 25
 #define C0_Spell_7_MAX_SNOW 75
-/* C0_Spell_7_handler: class 0 spell 7 - lightning and ice effect */
+
 void
 C0_Spell_7_handler(UNSHORT Strength)
 {
@@ -1123,7 +1184,7 @@ leavelop1c07:
 
 #define C0_Spell_8_MIN_SNOW 25
 #define C0_Spell_8_MAX_SNOW 75
-/* C0_Spell_8_handler: class 0 spell 8 - lightning and ice effect */
+
 void
 C0_Spell_8_handler(UNSHORT Strength)
 {
@@ -1455,14 +1516,29 @@ leavelop1c08:
 #define C0_10_FLASHRED 220
 #define C0_10_FLASHGREEN 180
 #define C0_10_FLASHBLUE 180
-/* C0_Spell_10_handler: class 0 spell 10 - apply to every target */
+
 void
 C0_Spell_10_handler(UNSHORT Strength)
 {
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C0_Spell_10);
 }
-/* Do_C0_Spell_10: class 0 spell 10 - beam effect on one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C0_Spell_10
+ * FUNCTION  : Class 0 spell 10: beam effect on one target.
+ * FILE      : COMMAG0.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C0_Spell_10(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -1640,7 +1716,7 @@ Do_C0_Spell_10(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
 /* #FUNCTION BEGIN# */
 
 #define C0_11_COMBAT_FIELDS (5*6)
-/* C0_Spell_11_handler: class 0 spell 11 - beams on several combat fields */
+
 void
 C0_Spell_11_handler(UNSHORT Strength)
 {
@@ -1914,7 +1990,7 @@ C0_Spell_11_handler(UNSHORT Strength)
 /* #FUNCTION BEGIN# */
 
 #define C0_12_COMBAT_FIELDS (5*6)
-/* C0_Spell_12_handler: class 0 spell 12 - beams on several combat fields */
+
 void
 C0_Spell_12_handler(UNSHORT Strength)
 {
@@ -2188,14 +2264,29 @@ C0_Spell_12_handler(UNSHORT Strength)
 
 #define C0_13_MIN_FAIRY 24
 #define C0_13_MAX_FAIRY 16
-/* C0_Spell_13_handler: class 0 spell 13 - apply to every target */
+
 void
 C0_Spell_13_handler(UNSHORT Strength)
 {
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C0_Spell_13);
 }
-/* Do_C0_Spell_13: class 0 spell 13 - fairy and halo effect on one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C0_Spell_13
+ * FUNCTION  : Class 0 spell 13: fairy and halo effect on one target.
+ * FILE      : COMMAG0.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C0_Spell_13(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -2499,7 +2590,22 @@ C0_Spell_14_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C0_Spell_14);
 }
-/* Do_C0_Spell_14: class 0 spell 14 - place a trap on a combat square */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C0_Spell_14
+ * FUNCTION  : Class 0 spell 14: place a trap on a combat square.
+ * FILE      : COMMAG0.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C0_Spell_14(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -2626,7 +2732,7 @@ static SILONG ast_offsetxy[][2]=
 
 #define C0_14_ANIMFOLLOW 1
 #define C0_14_MAXTRAILS 16
-/* Handle_C0_Spell_14_trap: class 0 spell 14 - trigger the trap */
+
 void
 Handle_C0_Spell_14_trap(struct Combat_participant *Victim_part,
  UNSHORT Strength, struct COMOB *Trap_COMOB)
@@ -2899,14 +3005,29 @@ Handle_C0_Spell_14_trap(struct Combat_participant *Victim_part,
 #define C0_Spell_15_MIN_SPARKS 6
 #define C0_Spell_15_MAX_SPARKS 2
 
-/* C0_Spell_15_handler: class 0 spell 15 - apply to every target */
+
 void
 C0_Spell_15_handler(UNSHORT Strength)
 {
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C0_Spell_15);
 }
-/* Do_C0_Spell_15: class 0 spell 15 - stars and sparks on one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C0_Spell_15
+ * FUNCTION  : Class 0 spell 15: stars and sparks on one target.
+ * FILE      : COMMAG0.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C0_Spell_15(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -3046,7 +3167,7 @@ Do_C0_Spell_15(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
 static struct COMOB *pilz_COMOB[C0_20_MAX_PILZE];
 static struct COMOB *pilzhalo_COMOB[C0_20_MAX_PILZE];
 //static UNSHORT pilz_nr[C0_20_MAX_PILZE];
-/* C0_Spell_20_handler: class 0 spell 20 - apply to every target */
+
 void
 C0_Spell_20_handler(UNSHORT Strength)
 {
@@ -3054,7 +3175,22 @@ C0_Spell_20_handler(UNSHORT Strength)
 	Do_all_magic_combat_targets(Strength, Do_C0_Spell_20);
 }
 
-/* Do_C0_Spell_20: class 0 spell 20 - mushroom effect on one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C0_Spell_20
+ * FUNCTION  : Class 0 spell 20: mushroom effect on one target.
+ * FILE      : COMMAG0.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C0_Spell_20(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)

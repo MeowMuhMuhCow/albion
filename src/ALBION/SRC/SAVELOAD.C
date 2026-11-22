@@ -1627,7 +1627,20 @@ EXIT_SAVE_GAME_STATE:
 	return Success;
 }
 
-/* Init_saved_XLD_library_check: remember the subfile lengths of the saved XLD libraries for later checks */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Init_saved_XLD_library_check
+ * FUNCTION  : Remember the subfile lengths of the saved XLD libraries for
+ *              later checks.
+ * FILE      : SAVELOAD.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
+#line 1631
 BOOLEAN
 Init_saved_XLD_library_check(void)
 {
@@ -1715,7 +1728,23 @@ Init_saved_XLD_library_check(void)
 
 	return (!Failure && (Counter == 16));
 }
-/* Check_saved_XLD_library: compare a loaded saved XLD library with the remembered subfile lengths */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Check_saved_XLD_library
+ * FUNCTION  : Compare a loaded saved XLD library with the remembered subfile
+ *              lengths and restore lengths that differ.
+ * FILE      : SAVELOAD.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNSHORT File_type_index - Index of XLD file type.
+ *             UNSHORT Group_nr - Group number (0...9).
+ *             MEM_HANDLE Handle - Memory handle of the loaded XLD library.
+ * RESULT    : UNSHORT : 0 = library found and checked, 1 = library not in the
+ *              list.
+ * #FUNCTION HEADER END#
+ */
+
+#line 1719
 static UNSHORT
 Check_saved_XLD_library(UNSHORT File_type_index, UNSHORT Group_nr,
  MEM_HANDLE Handle)

@@ -1060,7 +1060,19 @@ Activate_party_member(UNSHORT Member_nr)
 
 	return Result;
 }
-/* Do_activate_party_member: event action - make a party member the active character */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_activate_party_member
+ * FUNCTION  : Event action: make a party member the active character.
+ * FILE      : PRTLOGIC.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Event_action *Action - Pointer to event action data.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
+#line 1064
 BOOLEAN
 Do_activate_party_member(struct Event_action *Action)
 {

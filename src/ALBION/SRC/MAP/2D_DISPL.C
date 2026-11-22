@@ -1785,7 +1785,22 @@ Update_2D_unit(struct Scroll_data *Scroll, UNSHORT Buffer_X, UNSHORT Buffer_Y,
 
 
 
-/* Display_underlay_diagnostics: draw blocked travel modes/directions of an underlay icon (diagnostic mode) */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Display_underlay_diagnostics
+ * FUNCTION  : Draw blocked travel modes/directions of an underlay icon
+ *              (diagnostic mode).
+ * FILE      : 2D_DISPL.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct OPM *OPM - Pointer to target OPM.
+ *             UNSHORT X - Screen X-coordinate.
+ *             UNSHORT Y - Screen Y-coordinate.
+ *             UNLONG Flags - Icon flags (blocked travel modes and directions).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Display_underlay_diagnostics(struct OPM *OPM, UNSHORT X, UNSHORT Y,
  UNLONG Flags)
@@ -1831,7 +1846,22 @@ Display_underlay_diagnostics(struct OPM *OPM, UNSHORT X, UNSHORT Y,
 	if (Flags & ADD_NEXT_ICON)
 		OPM_Box(OPM, X + 12, Y + 12, 3, 3, WHITE);
 }
-/* Display_overlay_diagnostics: draw blocked travel modes/directions of an overlay icon (diagnostic mode) */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Display_overlay_diagnostics
+ * FUNCTION  : Draw blocked travel modes/directions of an overlay icon
+ *              (diagnostic mode).
+ * FILE      : 2D_DISPL.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct OPM *OPM - Pointer to target OPM.
+ *             UNSHORT X - Screen X-coordinate.
+ *             UNSHORT Y - Screen Y-coordinate.
+ *             UNLONG Flags - Icon flags (blocked travel modes and directions).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Display_overlay_diagnostics(struct OPM *OPM, UNSHORT X, UNSHORT Y,
  UNLONG Flags)
@@ -1907,7 +1937,22 @@ Display_overlay_diagnostics(struct OPM *OPM, UNSHORT X, UNSHORT Y,
 			OPM_Box(OPM, X + 3, Y + 3, 10, 10, RED);
 	}
 }
-/* Display_event_diagnostics: mark map squares that have event triggers (diagnostic mode) */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Display_event_diagnostics
+ * FUNCTION  : Mark map squares that have event triggers (diagnostic mode).
+ * FILE      : 2D_DISPL.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct OPM *OPM - Pointer to target OPM.
+ *             UNSHORT X - Screen X-coordinate.
+ *             UNSHORT Y - Screen Y-coordinate.
+ *             UNSHORT Map_X - Map X-coordinate.
+ *             UNSHORT Map_Y - Map Y-coordinate.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Display_event_diagnostics(struct OPM *OPM, UNSHORT X, UNSHORT Y,
  UNSHORT Map_X, UNSHORT Map_Y)

@@ -3737,7 +3737,18 @@ Event_error(UNSHORT Error_code)
 }
 
 
-/* Display_event_data: print the data of an event and its context (diagnostic output) */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Display_event_data
+ * FUNCTION  : Print the data of an event and its context (diagnostic output).
+ * FILE      : EVELOGIC.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Event_context *Context - Pointer to event context.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Display_event_data(struct Event_context *Context)
 {

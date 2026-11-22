@@ -2190,7 +2190,19 @@ HLC_Unknown_word(UNCHAR *Text)
 	/* Return entered word */
 	return Entered_word;
 }
-/* HLC_Price: text command - insert the current place price */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Price
+ * FUNCTION  : Text command: insert the current place price.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2194
 UNCHAR *
 HLC_Price(UNCHAR *Text)
 {
@@ -2206,7 +2218,19 @@ HLC_Price(UNCHAR *Text)
 
 	return HLC_String;
 }
-/* HLC_Damage: text command - insert the current combat damage */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Damage
+ * FUNCTION  : Text command: insert the current combat damage.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2210
 UNCHAR *
 HLC_Damage(UNCHAR *Text)
 {
@@ -2221,7 +2245,19 @@ HLC_Damage(UNCHAR *Text)
 
 	return HLC_String;
 }
-/* HLC_Weapon: text command - insert the name of the current combat weapon */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Weapon
+ * FUNCTION  : Text command: insert the name of the current combat weapon.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2225
 UNCHAR *
 HLC_Weapon(UNCHAR *Text)
 {
@@ -2237,7 +2273,19 @@ HLC_Weapon(UNCHAR *Text)
 
 	return HLC_String;
 }
-/* HLC_Select_leader: text command - select the active character as subject */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Select_leader
+ * FUNCTION  : Text command: select the active character as subject.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2241
 UNCHAR *
 HLC_Select_leader(UNCHAR *Text)
 {
@@ -2246,7 +2294,19 @@ HLC_Select_leader(UNCHAR *Text)
 
 	return NULL;
 }
-/* HLC_Select_self: text command - select the first party member as subject */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Select_self
+ * FUNCTION  : Text command: select the first party member as subject.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2250
 UNCHAR *
 HLC_Select_self(UNCHAR *Text)
 {
@@ -2255,7 +2315,19 @@ HLC_Select_self(UNCHAR *Text)
 
 	return NULL;
 }
-/* HLC_Select_inventory: text command - select the inventory character as subject */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Select_inventory
+ * FUNCTION  : Text command: select the inventory character as subject.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2259
 UNCHAR *
 HLC_Select_inventory(UNCHAR *Text)
 {
@@ -2264,7 +2336,19 @@ HLC_Select_inventory(UNCHAR *Text)
 
 	return NULL;
 }
-/* HLC_Select_dialogue: text command - select the dialogue partner as subject */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Select_dialogue
+ * FUNCTION  : Text command: select the dialogue partner as subject.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2268
 UNCHAR *
 HLC_Select_dialogue(UNCHAR *Text)
 {
@@ -2273,7 +2357,19 @@ HLC_Select_dialogue(UNCHAR *Text)
 
 	return NULL;
 }
-/* HLC_Select_combat: text command - select the acting combat participant as subject */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Select_combat
+ * FUNCTION  : Text command: select the acting combat participant as subject.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2277
 UNCHAR *
 HLC_Select_combat(UNCHAR *Text)
 {
@@ -2285,7 +2381,20 @@ HLC_Select_combat(UNCHAR *Text)
 
 	return NULL;
 }
-/* HLC_Select_victim: text command - select the victim of the acting combat participant */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Select_victim
+ * FUNCTION  : Text command: select the victim of the acting combat
+ *              participant.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2289
 UNCHAR *
 HLC_Select_victim(UNCHAR *Text)
 {
@@ -2297,7 +2406,19 @@ HLC_Select_victim(UNCHAR *Text)
 
 	return NULL;
 }
-/* HLC_Select_PUM_char: text command - select the character of the current pop-up menu */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Select_PUM_char
+ * FUNCTION  : Text command: select the character of the current pop-up menu.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2301
 UNCHAR *
 HLC_Select_PUM_char(UNCHAR *Text)
 {
@@ -2306,7 +2427,19 @@ HLC_Select_PUM_char(UNCHAR *Text)
 
 	return NULL;
 }
-/* HLC_Select_subject_char: text command - select the current subject character */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Select_subject_char
+ * FUNCTION  : Text command: select the current subject character.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2310
 UNCHAR *
 HLC_Select_subject_char(UNCHAR *Text)
 {
@@ -2315,7 +2448,19 @@ HLC_Select_subject_char(UNCHAR *Text)
 
 	return NULL;
 }
-/* HLC_Name: text command - insert the name of the subject */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Name
+ * FUNCTION  : Text command: insert the name of the subject.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2319
 UNCHAR *
 HLC_Name(UNCHAR *Text)
 {
@@ -2324,7 +2469,19 @@ HLC_Name(UNCHAR *Text)
 
 	return HLC_String;
 }
-/* HLC_He: text command - insert he/she/it for the subject */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_He
+ * FUNCTION  : Text command: insert he/she/it for the subject.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2328
 UNCHAR *
 HLC_He(UNCHAR *Text)
 {
@@ -2352,7 +2509,19 @@ HLC_He(UNCHAR *Text)
 
 	return System_text_ptrs[Nr];
 }
-/* HLC_Him: text command - insert him/her/it for the subject */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Him
+ * FUNCTION  : Text command: insert him/her/it for the subject.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2356
 UNCHAR *
 HLC_Him(UNCHAR *Text)
 {
@@ -2380,9 +2549,63 @@ HLC_Him(UNCHAR *Text)
 
 	return System_text_ptrs[Nr];
 }
-UNCHAR * HLC_Him2(UNCHAR *Text) { UNSHORT Nr; /* nur in MAIN.EXE (Stand 1996), Text-Befehl HIM2 */ switch (Get_sex(HLC_Subject_handle)) { case MALE: { Nr = 758; break; } case FEMALE: { Nr = 776; break; } default: { Nr = 777; break; } } return System_text_ptrs[Nr]; }
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Him2
+ * FUNCTION  : Text command HIM2: insert a second form of him/her/it for the
+ *              subject (only in the released MAIN.EXE, not in the 1995
+ *              source snapshots).
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted.
+ * #FUNCTION HEADER END#
+ */
+
 UNCHAR *
-HLC_His(UNCHAR *Text)  /* HLC_His: text command - insert his/her/its for the subject */
+HLC_Him2(UNCHAR *Text)
+{
+	UNSHORT Nr;
+
+	/* Select string depending on subject sex */
+	switch (Get_sex(HLC_Subject_handle))
+	{
+		case MALE:
+		{
+			Nr = 758;
+			break;
+		}
+		case FEMALE:
+		{
+			Nr = 776;
+			break;
+		}
+		default:
+		{
+			Nr = 777;
+			break;
+		}
+	}
+
+	return System_text_ptrs[Nr];
+}
+#line 2384
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_His
+ * FUNCTION  : Text command: insert his/her/its for the subject.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2384
+UNCHAR *
+HLC_His(UNCHAR *Text)
 {
 	UNSHORT Nr;
 
@@ -2408,7 +2631,19 @@ HLC_His(UNCHAR *Text)  /* HLC_His: text command - insert his/her/its for the sub
 
 	return System_text_ptrs[Nr];
 }
-/* HLC_Man: text command - insert man/woman for the subject */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Man
+ * FUNCTION  : Text command: insert man/woman for the subject.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2412
 UNCHAR *
 HLC_Man(UNCHAR *Text)
 {
@@ -2436,31 +2671,91 @@ HLC_Man(UNCHAR *Text)
 
 	return System_text_ptrs[Nr];
 }
-/* HLC_Race: text command - insert the race of the subject */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Race
+ * FUNCTION  : Text command: insert the race of the subject.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2440
 UNCHAR *
 HLC_Race(UNCHAR *Text)
 {
 	return System_text_ptrs[Get_race(HLC_Subject_handle) + 456];
 }
-/* HLC_Class: text command - insert the class of the subject */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Class
+ * FUNCTION  : Text command: insert the class of the subject.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2446
 UNCHAR *
 HLC_Class(UNCHAR *Text)
 {
 	return System_text_ptrs[Get_class(HLC_Subject_handle) + 95];
 }
-/* HLC_Race_insult: text command - insert an insult for the race of the subject */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Race_insult
+ * FUNCTION  : Text command: insert an insult for the race of the subject.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2452
 UNCHAR *
 HLC_Race_insult(UNCHAR *Text)
 {
 	return System_text_ptrs[Get_race(HLC_Subject_handle) + 472];
 }
-/* HLC_Class_insult: text command - insert an insult for the class of the subject */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Class_insult
+ * FUNCTION  : Text command: insert an insult for the class of the subject.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2458
 UNCHAR *
 HLC_Class_insult(UNCHAR *Text)
 {
 	return System_text_ptrs[Get_class(HLC_Subject_handle) + 135];
 }
-/* HLC_Sex_char: text command - insert the sex symbol of the subject */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Sex_char
+ * FUNCTION  : Text command: insert the sex symbol of the subject.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2464
 UNCHAR *
 HLC_Sex_char(UNCHAR *Text)
 {
@@ -2486,7 +2781,19 @@ HLC_Sex_char(UNCHAR *Text)
 
 	return String;
 }
-/* HLC_Add_new_word: text command - add the given words to the party's dictionary */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : HLC_Add_new_word
+ * FUNCTION  : Text command: add the given words to the party's dictionary.
+ * FILE      : GAMETEXT.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : UNCHAR * : Pointer to string that must be inserted / NULL.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2490
 UNCHAR *
 HLC_Add_new_word(UNCHAR *Text)
 {

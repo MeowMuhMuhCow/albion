@@ -962,12 +962,35 @@ Init_AIL_system(void)
 		return TRUE;
 	}
 }
-/* Exit_AIL_system: shut down the sound system (empty in this version) */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Exit_AIL_system
+ * FUNCTION  : Shut down the sound system (empty in this version).
+ * FILE      : MAIN.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Exit_AIL_system(void)
 {
 }
-/* Local_Init_AIL_system: start AIL with BASEMEM allocation and register the BB32 system timer with AIL */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Local_Init_AIL_system
+ * FUNCTION  : Start AIL with BASEMEM allocation and register the BB32 system
+ *              timer with AIL.
+ * FILE      : MAIN.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
 BOOLEAN
 Local_Init_AIL_system(void)
 {
@@ -993,7 +1016,18 @@ Local_Init_AIL_system(void)
 
 	return TRUE;
 }
-/* Local_Exit_AIL_system: stop and release the AIL timer, then shut AIL down */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Local_Exit_AIL_system
+ * FUNCTION  : Stop and release the AIL timer, then shut AIL down.
+ * FILE      : MAIN.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Local_Exit_AIL_system(void)
 {
@@ -1010,13 +1044,35 @@ Local_Exit_AIL_system(void)
 		AIL_shutdown();
 	}
 }
-/* AIL_Alloc: memory allocator handed to AIL (flat BASEMEM block) */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : AIL_Alloc
+ * FUNCTION  : Memory allocator handed to AIL (flat BASEMEM block).
+ * FILE      : MAIN.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : size_t Size - Size of memory block in bytes.
+ * RESULT    : void * : Pointer to memory block / NULL (error).
+ * #FUNCTION HEADER END#
+ */
+
 void *
 AIL_Alloc(size_t Size)
 {
 	return((void *) BASEMEM_Alloc((UNLONG) Size, BASEMEM_Status_Flat));
 }
-/* AIL_Free: memory release handed to AIL (BASEMEM) */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : AIL_Free
+ * FUNCTION  : Memory release handed to AIL (BASEMEM).
+ * FILE      : MAIN.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : void *Ptr - Pointer to memory block.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 AIL_Free(void *Ptr)
 {
@@ -1024,7 +1080,18 @@ AIL_Free(void *Ptr)
 }
 
 #pragma off (check_stack)
-/* My_system_timer: AIL timer callback, runs the BB32 system timer function */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : My_system_timer
+ * FUNCTION  : AIL timer callback, runs the BB32 system timer function.
+ * FILE      : MAIN.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void cdecl
 My_system_timer(void)
 {

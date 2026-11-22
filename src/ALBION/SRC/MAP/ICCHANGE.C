@@ -200,7 +200,18 @@ Exit_modifications(MEM_HANDLE First_list_handle)
 {
 	Destroy_modification_list(First_list_handle);
 }
-/* Destroy_modification_list: free a chain of map modification lists */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Destroy_modification_list
+ * FUNCTION  : Free a chain of map modification lists.
+ * FILE      : ICCHANGE.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : MEM_HANDLE Handle - Memory handle of the first list.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Destroy_modification_list(MEM_HANDLE Handle)
 {

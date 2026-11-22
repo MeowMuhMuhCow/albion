@@ -58,14 +58,30 @@
 /* #FUNCTION BEGIN# */
 
 #define C2_Spell_1_ANZHALOCOMOBS 3
-/* C2_Spell_1_handler: class 2 spell 1 - apply to every target */
+
 void
 C2_Spell_1_handler(UNSHORT Strength)
 {
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C2_Spell_1);
 }
-/* Do_C2_Spell_1: class 2 spell 1 - magic effect on a party member and a temporary effect */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C2_Spell_1
+ * FUNCTION  : Class 2 spell 1: magic effect on a party member and a temporary
+ *              effect.
+ * FILE      : COMMAG2.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C2_Spell_1(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -109,7 +125,22 @@ C2_Spell_2_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C2_Spell_2);
 }
-/* Do_C2_Spell_2: class 2 spell 2 - beam effect on one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C2_Spell_2
+ * FUNCTION  : Class 2 spell 2: beam effect on one target.
+ * FILE      : COMMAG2.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C2_Spell_2(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -367,7 +398,22 @@ C2_Spell_5_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C2_Spell_5);
 }
-/* Do_C2_Spell_5: class 2 spell 5 - fireball and fire ring on one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C2_Spell_5
+ * FUNCTION  : Class 2 spell 5: fireball and fire ring on one target.
+ * FILE      : COMMAG2.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C2_Spell_5(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -592,7 +638,22 @@ C2_Spell_6_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C2_Spell_6);
 }
-/* Do_C2_Spell_6: class 2 spell 6 - temporary effect on a party member */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C2_Spell_6
+ * FUNCTION  : Class 2 spell 6: temporary effect on a party member.
+ * FILE      : COMMAG2.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C2_Spell_6(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -646,14 +707,29 @@ Do_C2_Spell_6(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
 /* #FUNCTION BEGIN# */
 
 #define C2_Spell_8_ANZHALOCOMOBS 3
-/* C2_Spell_8_handler: class 2 spell 8 - apply to every target */
+
 void
 C2_Spell_8_handler(UNSHORT Strength)
 {
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C2_Spell_8);
 }
-/* Do_C2_Spell_8: class 2 spell 8 - scaled silhouettes that scare a monster */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C2_Spell_8
+ * FUNCTION  : Class 2 spell 8: scaled silhouettes that scare a monster.
+ * FILE      : COMMAG2.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C2_Spell_8(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)

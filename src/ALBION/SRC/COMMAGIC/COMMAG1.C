@@ -62,7 +62,7 @@
 #define C1_Spell_4_MAX_STARS 4
 
 #define C1_Spell_4_MAX_MAGIC 8
-/* C1_Spell_4_handler: class 1 spell 4 - magic objects flying to the targets */
+
 void
 C1_Spell_4_handler(UNSHORT Strength)
 {
@@ -613,7 +613,7 @@ C1_Spell_6_handler(UNSHORT Strength)
 
 static struct COMOB *ball_COMOB[C1_Spell_9_ANZDISSOLVECOMOBS];
 static UNSHORT dis_ch_nr[C1_Spell_9_ANZDISSOLVECOMOBS];
-/* C1_Spell_9_handler: class 1 spell 9 - rift and halo effect */
+
 void
 C1_Spell_9_handler(UNSHORT Strength)
 {
@@ -883,14 +883,29 @@ C1_Spell_9_handler(UNSHORT Strength)
 #define C1_Spell_10_ANZIRRTCOMOBS 48
 #define C1_Spell_10_CIRCLEDIVIDE 32
 #define C1_Spell_10_CIRCLERAD 45
-/* C1_Spell_10_handler: class 1 spell 10 - apply to every target */
+
 void
 C1_Spell_10_handler(UNSHORT Strength)
 {
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C1_Spell_10);
 }
-/* Do_C1_Spell_10: class 1 spell 10 - effect on one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C1_Spell_10
+ * FUNCTION  : Class 1 spell 10: effect on one target.
+ * FILE      : COMMAG1.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C1_Spell_10(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)

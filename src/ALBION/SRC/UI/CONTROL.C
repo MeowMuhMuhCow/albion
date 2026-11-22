@@ -1998,7 +1998,21 @@ Execute_broadcast_method(UNSHORT Handle, UNSHORT Method, union Method_parms *P)
 		Do_execute_broadcast_method(Handle, Method, P);
 	}
 }
-/* Do_execute_broadcast_method: call a method on an object and all objects below it */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_execute_broadcast_method
+ * FUNCTION  : Call a method on an object and all objects below it.
+ * FILE      : CONTROL.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNSHORT Handle - Handle of object.
+ *             UNSHORT Method - Method ID.
+ *             union Method_parms *P - Method parameters.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2002
 void
 Do_execute_broadcast_method(UNSHORT Handle, UNSHORT Method, union Method_parms *P)
 {
@@ -2486,7 +2500,21 @@ Object_at(SISHORT mX, SISHORT mY)
 	/* Call recursive function */
 	return(Find_object_at(mX, mY, Get_root_object_handle()));
 }
-/* Find_object_at: find the topmost object at a screen position */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Find_object_at
+ * FUNCTION  : Find the topmost object at a screen position.
+ * FILE      : CONTROL.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : SISHORT mX - Mouse X-coordinate.
+ *             SISHORT mY - Mouse Y-coordinate.
+ *             UNSHORT Handle - Handle of the object where the search starts.
+ * RESULT    : UNSHORT : Handle of the object found / 0 = none.
+ * #FUNCTION HEADER END#
+ */
+
+#line 2490
 UNSHORT
 Find_object_at(SISHORT mX, SISHORT mY, UNSHORT Handle)
 {

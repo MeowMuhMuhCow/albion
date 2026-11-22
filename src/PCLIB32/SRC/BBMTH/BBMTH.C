@@ -40,7 +40,7 @@ SILONG MTH_randomseed=1;
  ******************************************************************************
  * #FUNCTION HEADER BEGIN#
  * NAME     : MTH_sqrt
- * FUNCTION :
+ * FUNCTION : Square root (of the absolute value; negative values are reported as error).
  * FILE     : D:\PCLIB32\SRC\BBMATH\BBMTH.C
  * AUTHOR   : Rainer Reber
  * FIRST    : 26.05.95 12:05:59
@@ -77,7 +77,7 @@ SILONG MTH_sqrt(SILONG val)
  ******************************************************************************
  * #FUNCTION HEADER BEGIN#
  * NAME     : MTH_initrnd
- * FUNCTION :
+ * FUNCTION : Initialize the random number generator.
  * FILE     : D:\PCLIB32\SRC\BBMTH\BBMTH.C
  * AUTHOR   : Rainer Reber
  * FIRST    : 26.05.95 13:41:53
@@ -104,7 +104,7 @@ void MTH_initrnd(SILONG seed)
  ******************************************************************************
  * #FUNCTION HEADER BEGIN#
  * NAME     : MTH_rnd
- * FUNCTION :
+ * FUNCTION : Return a random number.
  * FILE     : D:\PCLIB32\SRC\BBMTH\BBMTH.C
  * AUTHOR   : Rainer Reber
  * FIRST    : 26.05.95 13:43:03
@@ -158,7 +158,7 @@ UNLONG MTH_veklen(SILONG x,SILONG y,SILONG z)
  ******************************************************************************
  * #FUNCTION HEADER BEGIN#
  * NAME     : MTH_sin
- * FUNCTION :
+ * FUNCTION : Sine from the lookup table (angle 0...65535 = 0...360 degrees).
  * FILE     : D:\PCLIB32\SRC\BBMTH\BBMTH.C
  * AUTHOR   : Rainer Reber
  * FIRST    : 26.05.95 16:42:50
@@ -197,7 +197,7 @@ SISHORT MTH_sin(UNSHORT winkel)
  ******************************************************************************
  * #FUNCTION HEADER BEGIN#
  * NAME     : MTH_cos
- * FUNCTION :
+ * FUNCTION : Cosine from the lookup table (angle 0...65535 = 0...360 degrees).
  * FILE     : D:\PCLIB32\SRC\BBMTH\BBMTH.C
  * AUTHOR   : Rainer Reber
  * FIRST    : 26.05.95 16:42:50
@@ -242,7 +242,7 @@ SISHORT MTH_cos(UNSHORT winkel)
  ******************************************************************************
  * #FUNCTION HEADER BEGIN#
  * NAME     : MTH_atan
- * FUNCTION :
+ * FUNCTION : Arc tangent of the vector (x, y) as angle.
  * FILE     : D:\PCLIB32\SRC\BBMTH\BBMTH.C
  * AUTHOR   : Rainer Reber
  * FIRST    : 26.05.95 17:40:21

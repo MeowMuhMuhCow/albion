@@ -50,6 +50,23 @@ UNSHORT Current_nr_target_parts;
  ******************************************************************************
  ******************************************************************************/
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_build_spell_target_list
+ * FUNCTION  : Add a combat participant to the list of spell targets (called
+ *              for every target by Do_all_magic_combat_targets).
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_build_spell_target_list(struct Combat_participant *Victim_part,
  UNSHORT Tactical_X, UNSHORT Tactical_Y, UNSHORT Strength)
@@ -86,6 +103,23 @@ Do_build_spell_target_list(struct Combat_participant *Victim_part,
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Gen_COMOB
+ * FUNCTION  : Create a COMOB at a 3D position with the given lifespan, size,
+ *              graphics and draw mode.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : SILONG x, SILONG y, SILONG z - 3D position.
+ *             SILONG life - Lifespan (0 = endless).
+ *             SILONG size - Display width and height.
+ *             MEM_HANDLE gfx - Graphics handle.
+ *             SILONG flag - Draw mode (GC_NORM, GC_TRANS, ...).
+ * RESULT    : struct COMOB * : Pointer to new COMOB / NULL (error).
+ * #FUNCTION HEADER END#
+ */
 
 struct COMOB *Gen_COMOB(SILONG x,SILONG y,SILONG z,SILONG life,SILONG size,MEM_HANDLE gfx,SILONG flag)
 {
@@ -277,6 +311,21 @@ SILONG dip3d(SILONG val0,SILONG val1,SILONG anz,SILONG intval)
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : calc_strength
+ * FUNCTION  : Scale the spell strength (1...100) linearly into the range
+ *              min...max (also works if max < min).
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : SILONG strength - Strength of spell (1...100).
+ *             SILONG min - Value at strength 0.
+ *             SILONG max - Value at strength 100.
+ * RESULT    : SILONG : Scaled value.
+ * #FUNCTION HEADER END#
+ */
+
 SILONG calc_strength(SILONG strength,SILONG min,SILONG max)
 {
 	SILONG ret;
@@ -311,6 +360,23 @@ SILONG calc_strength(SILONG strength,SILONG min,SILONG max)
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : calc_delta_xyz
+ * FUNCTION  : Calculate the movement vector from a start to a target position
+ *              for steps of a given length.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : SILONG sx, SILONG sy, SILONG sz - Start position (3D).
+ *             SILONG zx, SILONG zy, SILONG zz - Target position (3D).
+ *             SILONG *dx, SILONG *dy, SILONG *dz - Pointers to the resulting
+ *              vector per step.
+ *             SILONG ab - Length of one step.
+ * RESULT    : SILONG : Number of steps (0 = start and target are equal).
+ * #FUNCTION HEADER END#
+ */
 
 SILONG
 calc_delta_xyz(SILONG sx, SILONG sy, SILONG sz,
@@ -383,6 +449,19 @@ calc_delta_xyz(SILONG sx, SILONG sy, SILONG sz,
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : rndmm
+ * FUNCTION  : Return a random number between min and max (inclusive).
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : SILONG min - Lowest value.
+ *             SILONG max - Highest value.
+ * RESULT    : SILONG : Random number.
+ * #FUNCTION HEADER END#
+ */
+
 SILONG rndmm(SILONG min,SILONG max)
 {
 	SILONG rnd;
@@ -410,6 +489,20 @@ SILONG rndmm(SILONG min,SILONG max)
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : rndmm2
+ * FUNCTION  : Return a random number from one of two ranges, each chosen with
+ *              a chance of 50 %.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : SILONG min, SILONG max - First range.
+ *             SILONG minii, SILONG maxii - Second range.
+ * RESULT    : SILONG : Random number.
+ * #FUNCTION HEADER END#
+ */
 
 SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii)
 {
@@ -443,6 +536,19 @@ SILONG rndmm2(SILONG min,SILONG max,SILONG minii,SILONG maxii)
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : update_n_times
+ * FUNCTION  : Update the combat screen at least once and then until the given
+ *              time has passed.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : SILONG t - Time in combat updates.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void update_n_times(SILONG t)
 {
@@ -494,7 +600,7 @@ void update_n_times(SILONG t)
 #define MAX_ADD_HALO_COMOBS 16
 
 static struct COMOB *add_halo_comobs[MAX_ADD_HALO_COMOBS];
-/* Add_halo_to_COMOB_2: add a set of halo COMOBs around a COMOB (variant 2) */
+
 struct COMOB **Add_halo_to_COMOB_2(struct COMOB *Source_COMOB, UNSHORT Nr_halo_COMOBs,
  UNSHORT Halo_width, UNSHORT Halo_lifespan,UNSHORT flag)
 {
@@ -609,7 +715,22 @@ static SILONG genfunkenminy=-100;
 static SILONG genfunkenmaxy=300;
 static SILONG genfunkenminz=-200;
 static SILONG genfunkenmaxz=200;
-/* Gen_Funken: create a number of animated sparks at a 3D position */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Gen_Funken
+ * FUNCTION  : Create a number of animated sparks at a 3D position.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : SILONG x - X-coordinate (3D).
+ *             SILONG y - Y-coordinate (3D).
+ *             SILONG z - Z-coordinate (3D).
+ *             MEM_HANDLE obj - Graphics handle of the spark animation.
+ *             SILONG anz - Number of sparks.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
 BOOLEAN Gen_Funken(SILONG x,SILONG y,SILONG z,MEM_HANDLE obj,SILONG anz)
 {
 	struct COMOB *COMOB;
@@ -710,6 +831,24 @@ BOOLEAN Gen_Funken(SILONG x,SILONG y,SILONG z,MEM_HANDLE obj,SILONG anz)
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Gen_Sparks
+ * FUNCTION  : Create a number of sparks that fly from a 3D position in random
+ *              directions and bounce on the floor.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : SILONG x, SILONG y, SILONG z - 3D start position.
+ *             SILONG amount - Number of sparks.
+ *             SILONG speed - Maximum speed.
+ *             SILONG life - Lifespan.
+ *             SILONG size - Display size.
+ *             SILONG sparktyp - Spark graphics type.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void Gen_Sparks(SILONG x,SILONG y,SILONG z,SILONG amount,SILONG speed,SILONG life,SILONG size,SILONG sparktyp)
 {
 	struct COMOB *COMOB;
@@ -807,6 +946,20 @@ void Gen_Sparks(SILONG x,SILONG y,SILONG z,SILONG amount,SILONG speed,SILONG lif
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : groundglow
+ * FUNCTION  : Show a glow on the ground at a position for a while.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : SILONG x, SILONG z - Position on the ground (3D).
+ *             SILONG size - Size of the glow.
+ *             SILONG duration - Duration.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
 BOOLEAN	groundglow(SILONG x,SILONG z,SILONG size,SILONG duration)
 {
 	struct COMOB *COMOB;
@@ -898,6 +1051,19 @@ BOOLEAN	groundglow(SILONG x,SILONG z,SILONG size,SILONG duration)
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : makeflame
+ * FUNCTION  : Create an animated flame at a 3D position.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : SILONG x, SILONG y, SILONG z - 3D position.
+ *             SILONG flamesize - Size of the flame.
+ * RESULT    : struct COMOB * : Pointer to flame COMOB / NULL (error).
+ * #FUNCTION HEADER END#
+ */
+
 struct COMOB *makeflame(SILONG x,SILONG y,SILONG z,SILONG flamesize)
 {
 	struct COMOB *COMOB;
@@ -985,6 +1151,19 @@ struct COMOB *makeflame(SILONG x,SILONG y,SILONG z,SILONG flamesize)
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : gen_Dummy_COMOB
+ * FUNCTION  : Create an invisible helper COMOB (used as anchor for
+ *              behaviours).
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : struct COMOB * : Pointer to new COMOB / NULL (error).
+ * #FUNCTION HEADER END#
+ */
+
 struct COMOB *gen_Dummy_COMOB(void)
 {
 	struct COMOB *COMOB;
@@ -1052,6 +1231,24 @@ struct COMOB *gen_Dummy_COMOB(void)
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Dissolve
+ * FUNCTION  : Dissolve a monster into a grid of small coloured COMOBs taken
+ *              from its graphics.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *victim - Pointer to victim
+ *              participant data (must be a monster).
+ *             SILONG xsize, SILONG ysize - Size of one particle.
+ *             struct COMOB **comoblist - List that receives the created
+ *              COMOBs.
+ *             SILONG maxcomobs - Maximum number of COMOBs.
+ * RESULT    : SILONG : Number of COMOBs created.
+ * #FUNCTION HEADER END#
+ */
 
 SILONG Dissolve(struct Combat_participant *victim,SILONG xsize,SILONG ysize,struct COMOB **comoblist,SILONG maxcomobs)
 {
@@ -1236,6 +1433,20 @@ SILONG Dissolve(struct Combat_participant *victim,SILONG xsize,SILONG ysize,stru
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Test_COMOB_mask
+ * FUNCTION  : Check if a 3D position lies on a visible (non-transparent) pixel
+ *              of a COMOB.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB *source_COMOB - Pointer to COMOB data.
+ *             SILONG x3d, SILONG y3d - 3D position.
+ * RESULT    : BOOLEAN : TRUE (on a visible pixel) or FALSE.
+ * #FUNCTION HEADER END#
+ */
+
 BOOLEAN Test_COMOB_mask(struct COMOB *source_COMOB,SILONG x3d,SILONG y3d)
 {
 	BOOLEAN Result = TRUE;
@@ -1347,6 +1558,18 @@ Get_COMOB_max_size(struct COMOB *COMOB, UNSHORT *Width_ptr, UNSHORT *Height_ptr)
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Show_flashstar
+ * FUNCTION  : Show a star at a 3D position that grows and shrinks again.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : SILONG x, SILONG y, SILONG z - 3D position.
+ * RESULT    : struct COMOB * : Pointer to star COMOB / NULL (error).
+ * #FUNCTION HEADER END#
+ */
+
 struct COMOB *Show_flashstar(SILONG x,SILONG y,SILONG z)
 {
 	struct COMOB_behaviour *behave;
@@ -1397,7 +1620,22 @@ struct COMOB *Show_flashstar(SILONG x,SILONG y,SILONG z)
 #define MAX_ADD_SCHWEIF_COMOBS 16
 
 static struct COMOB *add_schweif_comobs[MAX_ADD_SCHWEIF_COMOBS];
-/* Add_schweif: add a trail of COMOBs behind a COMOB */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Add_schweif
+ * FUNCTION  : Add a trail of COMOBs behind a COMOB.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB *COMOB - Pointer to COMOB data.
+ *             SILONG trails - Number of trail COMOBs.
+ *             SILONG distance - Distance between the trail COMOBs.
+ *             SILONG sizelose - Value added to the size for each trail COMOB.
+ * RESULT    : struct COMOB ** : Pointer to list of trail COMOBs / NULL
+ *              (error).
+ * #FUNCTION HEADER END#
+ */
+
 struct COMOB **Add_schweif(struct COMOB *COMOB, SILONG trails, SILONG distance, SILONG sizelose)
 {
 	struct COMOB_behaviour *behave_trail;
@@ -1481,6 +1719,19 @@ struct COMOB **Add_schweif(struct COMOB *COMOB, SILONG trails, SILONG distance, 
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Show_deflect
+ * FUNCTION  : Show a ring effect when a spell is deflected by a participant.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Part - Pointer to participant data.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void Show_deflect(struct Combat_participant *Part, UNSHORT Strength)
 {
@@ -1604,6 +1855,19 @@ void Show_deflect(struct Combat_participant *Part, UNSHORT Strength)
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : size_handler
+ * FUNCTION  : Behaviour handler: shrink a COMOB step by step and delete it at
+ *              the minimum size.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB_behaviour *Behaviour - Pointer to behaviour data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void size_handler(struct COMOB_behaviour *Behaviour)
 {
 	struct COMOB *COMOB;
@@ -1681,6 +1945,19 @@ void size_handler(struct COMOB_behaviour *Behaviour)
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : size_II_handler
+ * FUNCTION  : Behaviour handler: let a COMOB grow to a maximum width, shrink
+ *              again and delete it at the minimum.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB_behaviour *Behaviour - Pointer to behaviour data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void size_II_handler(struct COMOB_behaviour *Behaviour)
 {
@@ -1773,6 +2050,19 @@ void size_II_handler(struct COMOB_behaviour *Behaviour)
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : size_III_handler
+ * FUNCTION  : Behaviour handler: let a COMOB grow and shrink between a minimum
+ *              and a maximum width.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB_behaviour *Behaviour - Pointer to behaviour data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void size_III_handler(struct COMOB_behaviour *Behaviour)
 {
 	struct COMOB *COMOB;
@@ -1856,6 +2146,18 @@ void size_III_handler(struct COMOB_behaviour *Behaviour)
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : flash_handler
+ * FUNCTION  : Behaviour handler: flash the palette for a moment.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB_behaviour *Behaviour - Pointer to behaviour data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void flash_handler(struct COMOB_behaviour *Behaviour)
 {
@@ -1946,6 +2248,18 @@ void flash_handler(struct COMOB_behaviour *Behaviour)
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : glow_handler
+ * FUNCTION  : Behaviour handler: recolour the palette step by step (glow).
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB_behaviour *Behaviour - Pointer to behaviour data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void glow_handler(struct COMOB_behaviour *Behaviour)
 {
 	struct COMOB *COMOB;
@@ -1987,6 +2301,19 @@ void glow_handler(struct COMOB_behaviour *Behaviour)
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : snow_handler
+ * FUNCTION  : Behaviour handler: move a snowflake with random acceleration and
+ *              delete it at the limits.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB_behaviour *Behaviour - Pointer to behaviour data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void snow_handler(struct COMOB_behaviour *Behaviour)
 {
@@ -2073,6 +2400,19 @@ void snow_handler(struct COMOB_behaviour *Behaviour)
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : snow_II_handler
+ * FUNCTION  : Behaviour handler: keep creating new snowflakes (at a position,
+ *              at random or in a row).
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB_behaviour *Behaviour - Pointer to behaviour data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void snow_II_handler(struct COMOB_behaviour *Behaviour)
 {
@@ -2206,6 +2546,19 @@ void snow_II_handler(struct COMOB_behaviour *Behaviour)
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : FireBounce_handler
+ * FUNCTION  : Behaviour handler: fireball with gravity and air friction that
+ *              creates sparks when it hits the floor.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB_behaviour *Behaviour - Pointer to behaviour data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void FireBounce_handler(struct COMOB_behaviour *Behaviour)
 {
@@ -2465,6 +2818,19 @@ Oscillate_II_handler(struct COMOB_behaviour *Behaviour)
 /* #FUNCTION BEGIN# */
 
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : CrazyMove_handler
+ * FUNCTION  : Behaviour handler: move a COMOB with changing random
+ *              acceleration.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB_behaviour *Behaviour - Pointer to behaviour data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void CrazyMove_handler(struct COMOB_behaviour *Behaviour)
 {
 	struct COMOB *COMOB;
@@ -2571,6 +2937,19 @@ void CrazyMove_handler(struct COMOB_behaviour *Behaviour)
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : connect_handler
+ * FUNCTION  : Behaviour handler: keep a COMOB at the position and size of
+ *              another COMOB.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB_behaviour *Behaviour - Pointer to behaviour data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void connect_handler(struct COMOB_behaviour *Behaviour)
 {
 	struct COMOB *COMOB0;
@@ -2624,6 +3003,18 @@ void connect_handler(struct COMOB_behaviour *Behaviour)
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : funken_handler
+ * FUNCTION  : Behaviour handler: follow another COMOB and emit sparks.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB_behaviour *Behaviour - Pointer to behaviour data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void funken_handler(struct COMOB_behaviour *Behaviour)
 {
@@ -2684,6 +3075,18 @@ void funken_handler(struct COMOB_behaviour *Behaviour)
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : groundglow_handler
+ * FUNCTION  : Behaviour handler: keep a ground glow below another COMOB.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB_behaviour *Behaviour - Pointer to behaviour data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void groundglow_handler(struct COMOB_behaviour *Behaviour)
 {
 	struct COMOB *COMOB;
@@ -2738,6 +3141,19 @@ void groundglow_handler(struct COMOB_behaviour *Behaviour)
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : lifedead_handler
+ * FUNCTION  : Behaviour handler: when the lifespan of a COMOB runs out,
+ *              replace it with a new COMOB.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB_behaviour *Behaviour - Pointer to behaviour data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void lifedead_handler(struct COMOB_behaviour *Behaviour)
 {
@@ -2839,7 +3255,18 @@ void lifedead_handler(struct COMOB_behaviour *Behaviour)
 
 static UNBYTE fairy_greycol[17];
 static BOOLEAN fairy_greycol_generated=FALSE;
-/* Fairy_II_handler: behaviour handler of a fairy that leaves dust */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Fairy_II_handler
+ * FUNCTION  : Behaviour handler of a fairy that leaves dust.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB_behaviour *Behaviour - Pointer to behaviour data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Fairy_II_handler(struct COMOB_behaviour *Behaviour)
 {
@@ -3215,6 +3642,19 @@ Trail_II_handler(struct COMOB_behaviour *Behaviour)
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Gravity_handler
+ * FUNCTION  : Behaviour handler: apply gravity to a COMOB and delete it below
+ *              a given height.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB_behaviour *Behaviour - Pointer to behaviour data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void Gravity_handler(struct COMOB_behaviour *Behaviour)
 {
 	struct COMOB *COMOB;
@@ -3244,7 +3684,20 @@ void Gravity_handler(struct COMOB_behaviour *Behaviour)
 
 #define PARTY_FX_MIN_SHAPES 3
 #define PARTY_FX_MAX_SHAPES 6
-/* Party_magic_effect: show the magic effect on a party member */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Party_magic_effect
+ * FUNCTION  : Show the magic effect on a party member.
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Party_magic_effect(struct Combat_participant *Victim_part, UNSHORT Strength)
 {
@@ -3384,7 +3837,23 @@ Party_magic_effect(struct Combat_participant *Victim_part, UNSHORT Strength)
 #define MAX_ADD_SCHWEIF_COMOBS 16
 
 static struct COMOB *add_schweif_comobs[MAX_ADD_SCHWEIF_COMOBS];
-/* Add_schweif: add a trail of COMOBs behind a COMOB (variable distance) */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Add_schweif
+ * FUNCTION  : Add a trail of COMOBs behind a COMOB (variable distance).
+ * FILE      : COMMSUB.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct COMOB *COMOB - Pointer to COMOB data.
+ *             SILONG trails - Number of trail COMOBs.
+ *             SILONG mindistance - Minimum distance between the trail COMOBs.
+ *             SILONG maxdistance - Maximum distance between the trail COMOBs.
+ *             SILONG sizelose - Value added to the size for each trail COMOB.
+ * RESULT    : struct COMOB ** : Pointer to list of trail COMOBs / NULL
+ *              (error).
+ * #FUNCTION HEADER END#
+ */
+
 struct COMOB **Add_schweif(struct COMOB *COMOB,SILONG trails,SILONG mindistance,SILONG maxdistance,SILONG sizelose)
 {
 	struct COMOB_behaviour *behave_trail;

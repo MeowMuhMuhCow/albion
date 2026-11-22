@@ -104,7 +104,19 @@ C0_Spell_9_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_party_targets(Strength, Do_C0_Spell_9);
 }
-/* Do_C0_Spell_9: class 0 spell 9 - heal a party member (life points) */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C0_Spell_9
+ * FUNCTION  : Class 0 spell 9: heal a party member (life points).
+ * FILE      : SPELLS.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNSHORT Member_nr - Party member index (1...6).
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C0_Spell_9(UNSHORT Member_nr, UNSHORT Strength)
 {
@@ -155,7 +167,19 @@ C0_Spell_17_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_party_targets(Strength, Do_C0_Spell_17);
 }
-/* Do_C0_Spell_17: class 0 spell 17 - cure the condition STONED */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C0_Spell_17
+ * FUNCTION  : Class 0 spell 17: cure the condition STONED.
+ * FILE      : SPELLS.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNSHORT Member_nr - Party member index (1...6).
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C0_Spell_17(UNSHORT Member_nr, UNSHORT Strength)
 {
@@ -197,7 +221,19 @@ C0_Spell_18_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_party_targets(Strength, Do_C0_Spell_18);
 }
-/* Do_C0_Spell_18: class 0 spell 18 - cure the condition BLIND */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C0_Spell_18
+ * FUNCTION  : Class 0 spell 18: cure the condition BLIND.
+ * FILE      : SPELLS.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNSHORT Member_nr - Party member index (1...6).
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C0_Spell_18(UNSHORT Member_nr, UNSHORT Strength)
 {
@@ -239,7 +275,19 @@ C0_Spell_19_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_party_targets(Strength, Do_C0_Spell_19);
 }
-/* Do_C0_Spell_19: class 0 spell 19 - cure the condition POISONED */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C0_Spell_19
+ * FUNCTION  : Class 0 spell 19: cure the condition POISONED.
+ * FILE      : SPELLS.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNSHORT Member_nr - Party member index (1...6).
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C0_Spell_19(UNSHORT Member_nr, UNSHORT Strength)
 {
@@ -316,7 +364,19 @@ C1_Spell_1_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_party_targets(Strength, Do_C1_Spell_1);
 }
-/* Do_C1_Spell_1: class 1 spell 1 - cure all conditions and heal a party member */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C1_Spell_1
+ * FUNCTION  : Class 1 spell 1: cure all conditions and heal a party member.
+ * FILE      : SPELLS.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNSHORT Member_nr - Party member index (1...6).
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C1_Spell_1(UNSHORT Member_nr, UNSHORT Strength)
 {
@@ -458,7 +518,19 @@ C1_Spell_5_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_party_targets(Strength, Do_C1_Spell_5);
 }
-/* Do_C1_Spell_5: class 1 spell 5 - heal a party member (life points) */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C1_Spell_5
+ * FUNCTION  : Class 1 spell 5: heal a party member (life points).
+ * FILE      : SPELLS.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNSHORT Member_nr - Party member index (1...6).
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C1_Spell_5(UNSHORT Member_nr, UNSHORT Strength)
 {
@@ -521,7 +593,20 @@ C1_Spell_11_handler(UNSHORT Strength)
 		Do_text_window(System_text_ptrs[413]);
 	}
 }
-/* Do_C1_Spell_11: class 1 spell 11 - remove exhaustion and let a party member recuperate */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C1_Spell_11
+ * FUNCTION  : Class 1 spell 11: remove exhaustion and let a party member
+ *              recuperate.
+ * FILE      : SPELLS.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNSHORT Member_nr - Party member index (1...6).
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C1_Spell_11(UNSHORT Member_nr, UNSHORT Strength)
 {
@@ -566,7 +651,19 @@ C2_Spell_7_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_party_targets(Strength, Do_C2_Spell_7);
 }
-/* Do_C2_Spell_7: class 2 spell 7 - heal a party member (life points) */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C2_Spell_7
+ * FUNCTION  : Class 2 spell 7: heal a party member (life points).
+ * FILE      : SPELLS.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNSHORT Member_nr - Party member index (1...6).
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C2_Spell_7(UNSHORT Member_nr, UNSHORT Strength)
 {

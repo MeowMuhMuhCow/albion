@@ -149,6 +149,18 @@ BOOLEAN inMouseInterrupt;
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : SYSTEM_Int09
+ * FUNCTION  : Keyboard interrupt: register key presses and releases.
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void __interrupt __far SYSTEM_Int09()
 {
 	UNSHORT key;
@@ -181,7 +193,19 @@ void __interrupt __far SYSTEM_Int09()
 /* #FUNCTION BEGIN# */
 
 #pragma off (check_stack)
-/* SYSTEM_Int08: timer interrupt, runs the system timer and chains to the old handler */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : SYSTEM_Int08
+ * FUNCTION  : Timer interrupt, runs the system timer and chains to the old
+ *              handler.
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void __interrupt __far SYSTEM_Int08()
 {
 	SYSTEM_Timer_function();
@@ -213,7 +237,18 @@ void __interrupt __far SYSTEM_Int08()
 /* #FUNCTION BEGIN# */
 
 #pragma off (check_stack)
-/* SYSTEM_Timer_function: system timer tick (ticks, double click timeout) */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : SYSTEM_Timer_function
+ * FUNCTION  : System timer tick (ticks, double click timeout).
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 SYSTEM_Timer_function(void)
 {
@@ -267,7 +302,24 @@ SYSTEM_Timer_function(void)
 /* #FUNCTION BEGIN# */
 
 #pragma off (check_stack)
-void _loadds far Mouse_handler (SILONG max, SILONG mbx, SILONG mcx, SILONG mdx, SILONG msi, SILONG mdi)  /* Mouse_handler: mouse driver callback, turns mouse actions into events */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Mouse_handler
+ * FUNCTION  : Mouse driver callback, turns mouse actions into events.
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : SILONG max - Event mask from the mouse driver (AX).
+ *             SILONG mbx - Button state (BX).
+ *             SILONG mcx - Mouse X-coordinate (CX).
+ *             SILONG mdx - Mouse Y-coordinate (DX).
+ *             SILONG msi - Horizontal mickey count (SI).
+ *             SILONG mdi - Vertical mickey count (DI).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
+void _loadds far Mouse_handler (SILONG max, SILONG mbx, SILONG mcx, SILONG mdx, SILONG msi, SILONG mdi)
 {
 #pragma aux Mouse_handler parm [EAX] [EBX] [ECX] [EDX] [ESI] [EDI]
 
@@ -479,6 +531,18 @@ void _loadds far Mouse_handler (SILONG max, SILONG mbx, SILONG mcx, SILONG mdx, 
 	end_int((UNBYTE *)&save_int_regs[0]);
 
 }
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : cbc_end
+ * FUNCTION  : Empty function that marks the end of the locked interrupt code.
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void cbc_end (void)       /* Dummy function so we can */
 {                                                                                               /* calculate size of code to lock */
 }                                                                                               /* (cbc_end - click_handler) */
@@ -1153,7 +1217,7 @@ SYSTEM_SystemAlert( short dialogId )
 /* #FUNCTION BEGIN# */
 
 #pragma off (check_stack)
-/* SYSTEM_GetBLEVStatusLong: return the state of the mouse buttons as event flags */
+
 UNLONG
 SYSTEM_GetBLEVStatusLong( void )
 {
@@ -1215,7 +1279,18 @@ SYSTEM_GetBLEVStatusLong( void )
 /* #FUNCTION BEGIN# */
 
 #pragma off (check_stack)
-/* SYSTEM_MouseRestore: restore the background under the mouse pointer */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : SYSTEM_MouseRestore
+ * FUNCTION  : Restore the background under the mouse pointer.
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void SYSTEM_MouseRestore(void)
 {
 	if(SYSTEMVAR_oldmposx[doublepage]!=-32000){
@@ -1330,7 +1405,18 @@ void SYSTEM_MouseRestore(void)
 /* #FUNCTION BEGIN# */
 
 #pragma off (check_stack)
-/* SYSTEM_MouseDisplay: save the background and draw the mouse pointer */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : SYSTEM_MouseDisplay
+ * FUNCTION  : Save the background and draw the mouse pointer.
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void SYSTEM_MouseDisplay(void)
 {
 		SYSTEMVAR_oldmposx[doublepage]=SYSTEMVAR_mousex+mousegto->xoffset;
@@ -1855,6 +1941,19 @@ SYSTEM_SetMousePtr(SISHORT X, SISHORT Y)
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : SYS_PrintError
+ * FUNCTION  : Format a system library error message into a string buffer.
+ * FILE      : BBSYSTEM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR * buffer - Pointer to string buffer.
+ *             UNBYTE * data - Pointer to error data.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void
 SYS_PrintError( UNCHAR * buffer, UNBYTE * data )

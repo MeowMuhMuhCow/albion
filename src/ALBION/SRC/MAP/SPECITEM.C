@@ -538,7 +538,19 @@ Display_special_items_2D(void)
 		MEM_Free_pointer(Clock_OPM_handle);
 	}
 }
-/* Prepare_2D_special_items_display: set up the display of the special items for the 2D map */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Prepare_2D_special_items_display
+ * FUNCTION  : Set up the display of the special items for the 2D map.
+ * FILE      : SPECITEM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
+#line 542
 void
 Prepare_2D_special_items_display(void)
 {

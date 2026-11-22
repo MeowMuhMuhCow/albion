@@ -1973,7 +1973,18 @@ Handle_give_item_default_MC_entry(void)
 		}
 	}
 }
-/* Do_give_item: event action - give an item to the dialogue partner */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_give_item
+ * FUNCTION  : Event action: give an item to the dialogue partner.
+ * FILE      : DIALOGUE.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Event_action *Action - Pointer to event action data.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
 BOOLEAN
 Do_give_item(struct Event_action *Action)
 {
@@ -2056,7 +2067,18 @@ Handle_join_party_default_MC_entry(void)
 		Process_and_display_text(&Main_OPM, System_text_ptrs[501], WAIT_TEXT_DISPLAY_FLAG | DELAY_TEXT_DISPLAY_FLAG);
 	}
 }
-/* Do_join_party: event action - the dialogue partner joins the party */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_join_party
+ * FUNCTION  : Event action: the dialogue partner joins the party.
+ * FILE      : DIALOGUE.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Event_action *Action - Pointer to event action data.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
 BOOLEAN
 Do_join_party(struct Event_action *Action)
 {
@@ -2132,7 +2154,18 @@ Handle_leave_party_default_MC_entry(void)
 		Remove_party_member(Dialogue_party_member_index);
 	}
 }
-/* Do_leave_party: event action - the dialogue partner leaves the party */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_leave_party
+ * FUNCTION  : Event action: the dialogue partner leaves the party.
+ * FILE      : DIALOGUE.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Event_action *Action - Pointer to event action data.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
 BOOLEAN
 Do_leave_party(struct Event_action *Action)
 {
@@ -2204,7 +2237,18 @@ Handle_end_dialogue_default_MC_entry(void)
 		}
 	}
 }
-/* Do_end_dialogue: event action - end the current dialogue */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_end_dialogue
+ * FUNCTION  : Event action: end the current dialogue.
+ * FILE      : DIALOGUE.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Event_action *Action - Pointer to event action data.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
 BOOLEAN
 Do_end_dialogue(struct Event_action *Action)
 {
@@ -3463,7 +3507,18 @@ Exit_dialogue_log(void)
 {
 	Destroy_dialogue_log_list(First_dialogue_log_list);
 }
-/* Destroy_dialogue_log_list: free a chain of dialogue log lists */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Destroy_dialogue_log_list
+ * FUNCTION  : Free a chain of dialogue log lists.
+ * FILE      : DIALOGUE.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : MEM_HANDLE Handle - Memory handle of the first list.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Destroy_dialogue_log_list(MEM_HANDLE Handle)
 {

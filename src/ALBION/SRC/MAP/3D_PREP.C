@@ -981,7 +981,21 @@ Copy_texture(struct Texture_3D *Texture, UNBYTE *Source)
 	/* Ready */
 	MEM_Free_pointer(Texture->p.Handle);
 }
-/* Copy_texture2: copy a texture into the 3D texture buffer, converting it on the way */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Copy_texture2
+ * FUNCTION  : Copy a texture into the 3D texture buffer, converting it on the
+ *              way.
+ * FILE      : 3D_PREP.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Texture_3D *Texture - Pointer to texture data.
+ *             UNBYTE *Source - Pointer to source graphics.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
+#line 985
 void
 Copy_texture2(struct Texture_3D *Texture, UNBYTE *Source)
 {

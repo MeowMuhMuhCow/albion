@@ -32,6 +32,18 @@
 /********************** Main PRG ***************************/
 /***********************************************************/
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : main
+ * FUNCTION  : Main function of DUMP.
+ * FILE      : DUMP.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : int argc, char *argv[] - Program arguments.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void main ( int argc, char *argv[] )
 {
 	/*** Help ***/

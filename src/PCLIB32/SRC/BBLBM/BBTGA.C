@@ -73,6 +73,20 @@ static UNBYTE *pufferptr;
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : TGA_SetPixel
+ * FUNCTION  : Set a pixel in a high-colour or true-colour OPM.
+ * FILE      : BBTGA.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct OPM * opmptr - Pointer to target OPM.
+ *             SISHORT x, SISHORT y - Coordinates.
+ *             UNBYTE red, UNBYTE green, UNBYTE blue - Colour.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void TGA_SetPixel( struct OPM * opmptr, SISHORT x, SISHORT y, UNBYTE red, UNBYTE green, UNBYTE blue)
 {
 	/* Calc absolute offset */
@@ -122,6 +136,21 @@ void TGA_SetPixel( struct OPM * opmptr, SISHORT x, SISHORT y, UNBYTE red, UNBYTE
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : TGA_GetPixel
+ * FUNCTION  : Get the colour of a pixel in a high-colour or true-colour OPM.
+ * FILE      : BBTGA.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct OPM * opmptr - Pointer to source OPM.
+ *             SISHORT x, SISHORT y - Coordinates.
+ *             UNBYTE *red, UNBYTE *green, UNBYTE *blue - Pointers to the
+ *              colour components.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void TGA_GetPixel( struct OPM * opmptr, SISHORT x, SISHORT y, UNBYTE *red, UNBYTE *green, UNBYTE *blue)
 {
@@ -173,6 +202,20 @@ void TGA_GetPixel( struct OPM * opmptr, SISHORT x, SISHORT y, UNBYTE *red, UNBYT
 
 /* #FUNCTION BEGIN# */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : convert_targa_color
+ * FUNCTION  : Convert a Targa pixel (2, 3 or 4 bytes) into a colour.
+ * FILE      : BBTGA.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : IMAGE_COLOUR *tcolor - Pointer to target colour.
+ *             int pixelsize - Bytes per pixel.
+ *             unsigned char *bytes - Pointer to pixel data.
+ * RESULT    : BOOLEAN : Success (FALSE = bad pixel size).
+ * #FUNCTION HEADER END#
+ */
+
 BOOLEAN convert_targa_color(IMAGE_COLOUR *tcolor,int pixelsize,unsigned char *bytes)
 {
   switch (pixelsize)
@@ -223,6 +266,20 @@ BOOLEAN convert_targa_color(IMAGE_COLOUR *tcolor,int pixelsize,unsigned char *by
  */
 
 /* #FUNCTION BEGIN# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : tga_read
+ * FUNCTION  : Read bytes of a Targa file, either from memory or buffered from
+ *              a file.
+ * FILE      : BBTGA.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNBYTE *destmem - Pointer to target memory.
+ *             SILONG bytestoread - Number of bytes.
+ * RESULT    : SILONG : Number of bytes read / -1 (end of file).
+ * #FUNCTION HEADER END#
+ */
 
 static SILONG tga_read(UNBYTE *destmem,SILONG bytestoread)
 {
@@ -520,7 +577,7 @@ BOOLEAN LBM_ReadTGA( UNBYTE * tganame, struct OPM * opmptr, UNLONG flag)
  ******************************************************************************
  * #FUNCTION HEADER BEGIN#
  * NAME      : LBM_WriteTGA
- * FUNCTION  :
+ * FUNCTION  : Save an OPM as an uncompressed Targa (TGA) file.
  * FILE      : BBLBM.C
  * AUTHOR    : R.Reber
  * FIRST     : 20.07.94

@@ -922,7 +922,20 @@ Check_FLIC(void)
 		}
 	}
 }
-/* Init_data_paths: build the list of data paths (current directory and the path of ALBION.EXE) */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Init_data_paths
+ * FUNCTION  : Build the list of data paths (current directory and the path of
+ *              ALBION.EXE).
+ * FILE      : XFTYPES.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
+#line 926
 BOOLEAN
 Init_data_paths(void)
 {

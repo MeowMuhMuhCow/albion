@@ -256,7 +256,19 @@ Go_Inventory(UNSHORT Member_nr)
 
 	return Result;
 }
-/* Do_go_inventory: event action - enter (or switch) the inventory of a party member */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_go_inventory
+ * FUNCTION  : Event action: enter (or switch) the inventory of a party member.
+ * FILE      : INVENTO.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Event_action *Action - Pointer to event action data.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
+#line 260
 BOOLEAN
 Do_go_inventory(struct Event_action *Action)
 {

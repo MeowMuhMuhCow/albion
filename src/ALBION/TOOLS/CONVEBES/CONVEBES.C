@@ -47,6 +47,18 @@ void Main_error_output_function(UNCHAR * buffer);
 
 /* yo-ho */
 
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : main
+ * FUNCTION  : Main function of CONVEBES (convert an LBM picture).
+ * FILE      : CONVEBES.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : int argc, char** argv - Program arguments.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 main(int argc, char** argv)
 {
@@ -139,6 +151,18 @@ main(int argc, char** argv)
 
 	ERROR_PrintAllErrors(BBERROR_PAE_NORMAL);
 }
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Convert
+ * FUNCTION  : Unpack the LBM picture and write the converted graphics.
+ * FILE      : CONVEBES.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : None.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void
 Convert(void)
@@ -330,6 +354,18 @@ FindChunk( struct LBM * lbmptr, UNCHAR chunk[4] )
 }
 
 /* #FUNCTION END# */
+
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Main_error_output_function
+ * FUNCTION  : Print an error message of the libraries.
+ * FILE      : CONVEBES.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR * buffer - Pointer to error message.
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
 
 void
 Main_error_output_function(UNCHAR * buffer)

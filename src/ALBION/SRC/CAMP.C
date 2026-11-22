@@ -112,7 +112,18 @@ Enter_Camp(BOOLEAN Inn_flag)
 	/* Check events */
 	Perform_action(&Enter_camp_action);
 }
-/* Do_enter_camp: event action - open the camp screen */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_enter_camp
+ * FUNCTION  : Event action: open the camp screen.
+ * FILE      : CAMP.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Event_action *Action - Pointer to event action data.
+ * RESULT    : BOOLEAN : Success.
+ * #FUNCTION HEADER END#
+ */
+
 BOOLEAN
 Do_enter_camp(struct Event_action *Action)
 {

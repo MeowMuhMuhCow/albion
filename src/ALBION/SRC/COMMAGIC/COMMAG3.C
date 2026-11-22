@@ -74,7 +74,22 @@ C3_Spell_1_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C3_Spell_1);
 }
-/* Do_C3_Spell_1: class 3 spell 1 - fireball and fire ring on one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C3_Spell_1
+ * FUNCTION  : Class 3 spell 1: fireball and fire ring on one target.
+ * FILE      : COMMAG3.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C3_Spell_1(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -306,14 +321,29 @@ Do_C3_Spell_1(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
 #define C3_Spell_2_LEUCHTKUGEL_SIZE 150 /* muss > 100 sein */
 #define C3_Spell_2_LEUCHTKUGELFALLSTEPS 20
 #define C3_Spell_2_LEUCHTKUGELSTERNTEPS 32
-/* C3_Spell_2_handler: class 3 spell 2 - apply to every target */
+
 void
 C3_Spell_2_handler(UNSHORT Strength)
 {
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C3_Spell_2);
 }
-/* Do_C3_Spell_2: class 3 spell 2 - energy balls with trails on one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C3_Spell_2
+ * FUNCTION  : Class 3 spell 2: energy balls with trails on one target.
+ * FILE      : COMMAG3.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C3_Spell_2(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -738,7 +768,7 @@ C3_2_Error:
 
 #define C3_Spell_3_MIN_FLAMESIZE 40
 #define C3_Spell_3_MAX_FLAMESIZE 100
-/* C3_Spell_3_handler: class 3 spell 3 - snow effect */
+
 void
 C3_Spell_3_handler(UNSHORT Strength)
 {
@@ -944,7 +974,7 @@ no_COMOB:
 #define C3_Spell_4_MAX_FLASHTIMELIGHT 6
 
 #define C3_Spell_4_ANZHALOCOMOBS 3
-/* C3_Spell_4_handler: class 3 spell 4 - lightning and halo effect */
+
 void
 C3_Spell_4_handler(UNSHORT Strength)
 {
@@ -1382,7 +1412,7 @@ C3_Spell_4_handler(UNSHORT Strength)
 #define C3_Spell_5_MAX_ENERGIEBALLS 16
 #define C3_Spell_5_MIN_FLAMES 6
 #define C3_Spell_5_MAX_FLAMES 12
-/* C3_Spell_5_handler: class 3 spell 5 - bouncing, glowing objects */
+
 void
 C3_Spell_5_handler(UNSHORT Strength)
 {
@@ -1785,7 +1815,7 @@ C3_Spell_5_handler(UNSHORT Strength)
 #define C3_Spell_6_MAX_BLITZSIZE 100
 
 #define C3_Spell_6_ANZHALOCOMOBS 2
-/* C3_Spell_6_handler: class 3 spell 6 - halo effect on the targets */
+
 void
 C3_Spell_6_handler(UNSHORT Strength)
 {
@@ -2230,7 +2260,22 @@ C3_Spell_7_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C3_Spell_7);
 }
-/* Do_C3_Spell_7: class 3 spell 7 - place a trap on a combat square */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C3_Spell_7
+ * FUNCTION  : Class 3 spell 7: place a trap on a combat square.
+ * FILE      : COMMAG3.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C3_Spell_7(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -2449,7 +2494,7 @@ Do_C3_Spell_7(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
 
 #define C3_Spell_7_MIN_BALLS 16
 #define C3_Spell_7_MAX_BALLS 96
-/* Handle_C3_Spell_7_trap: class 3 spell 7 - trigger the trap (explosion and lightning) */
+
 void
 Handle_C3_Spell_7_trap(struct Combat_participant *Victim_part,
  UNSHORT Strength, struct COMOB *Trap_COMOB)
@@ -2821,7 +2866,22 @@ C3_Spell_9_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C3_Spell_9);
 }
-/* Do_C3_Spell_9: class 3 spell 9 - place a trap on a combat square */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C3_Spell_9
+ * FUNCTION  : Class 3 spell 9: place a trap on a combat square.
+ * FILE      : COMMAG3.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C3_Spell_9(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -3039,7 +3099,7 @@ Do_C3_Spell_9(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
 
 #define C3_Spell_9_MIN_STARS 10
 #define C3_Spell_9_MAX_STARS 20
-/* Handle_C3_Spell_9_trap: class 3 spell 9 - trigger the trap */
+
 void
 Handle_C3_Spell_9_trap(struct Combat_participant *Victim_part,
  UNSHORT Strength, struct COMOB *Trap_COMOB)
@@ -3238,14 +3298,29 @@ C3_Spell_10_handler(UNSHORT Strength)
 
 #define C3_Spell_11_MIN_BALLS 16
 #define C3_Spell_11_MAX_BALLS 32
-/* C3_Spell_11_handler: class 3 spell 11 - apply to every target */
+
 void
 C3_Spell_11_handler(UNSHORT Strength)
 {
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C3_Spell_11);
 }
-/* Do_C3_Spell_11: class 3 spell 11 - halos and balls on one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C3_Spell_11
+ * FUNCTION  : Class 3 spell 11: halos and balls on one target.
+ * FILE      : COMMAG3.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C3_Spell_11(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -3547,14 +3622,29 @@ Do_C3_Spell_11(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
 
 #define C3_Spell_12_MIN_BALLS 16
 #define C3_Spell_12_MAX_BALLS 32
-/* C3_Spell_12_handler: class 3 spell 12 - apply to every target */
+
 void
 C3_Spell_12_handler(UNSHORT Strength)
 {
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C3_Spell_12);
 }
-/* Do_C3_Spell_12: class 3 spell 12 - halos and balls on one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C3_Spell_12
+ * FUNCTION  : Class 3 spell 12: halos and balls on one target.
+ * FILE      : COMMAG3.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C3_Spell_12(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -3916,7 +4006,7 @@ C3_Spell_13_handler(UNSHORT Strength)
 #define C3_Spell_14_MAX_LIGHTCOMOB 6
 
 #define C3_Spell_14_MOVESPEED 175
-/* C3_Spell_14_handler: class 3 spell 14 - apply to every target */
+
 void
 C3_Spell_14_handler(UNSHORT Strength)
 {
@@ -3925,7 +4015,22 @@ C3_Spell_14_handler(UNSHORT Strength)
 }
 
 static struct COMOB *ball_COMOB[C3_Spell_14_ANZDISSOLVECOMOBS];
-/* Do_C3_Spell_14: class 3 spell 14 - charging balls, light and flash on one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C3_Spell_14
+ * FUNCTION  : Class 3 spell 14: charging balls, light and flash on one target.
+ * FILE      : COMMAG3.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C3_Spell_14(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -4282,14 +4387,29 @@ Do_C3_Spell_14(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
 
 #define C3_Spell_15_MIN_SPARKS 6
 #define C3_Spell_15_MAX_SPARKS 2
-/* C3_Spell_15_handler: class 3 spell 15 - apply to every target */
+
 void
 C3_Spell_15_handler(UNSHORT Strength)
 {
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C3_Spell_15);
 }
-/* Do_C3_Spell_15: class 3 spell 15 - stars and sparks on one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C3_Spell_15
+ * FUNCTION  : Class 3 spell 15: stars and sparks on one target.
+ * FILE      : COMMAG3.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C3_Spell_15(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)

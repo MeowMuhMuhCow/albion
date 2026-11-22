@@ -1202,7 +1202,7 @@ BOOLEAN DOS_Exist(UNCHAR *filenameptr)
  ******************************************************************************
  * #FUNCTION HEADER BEGIN#
  * NAME     : DOS_getcurrentdir
- * FUNCTION :
+ * FUNCTION : Return the current drive and directory.
  * FILE     : D:\PCLIB32\SRC\BBDOS\BBDOS.C
  * AUTHOR   : Rainer Reber
  * FIRST    : 11.08.95 11:01:01
@@ -1217,7 +1217,7 @@ BOOLEAN DOS_Exist(UNCHAR *filenameptr)
 
 /* #FUNCTION BEGIN# */
 static UNCHAR DOS_getcurrentdir_path[_MAX_PATH];
-/* DOS_GetCurrentDir: return the current working directory */
+
 UNCHAR *DOS_GetCurrentDir( void )
 {
 	char *cwd;
@@ -1265,7 +1265,7 @@ UNCHAR *DOS_GetCurrentDir( void )
  ******************************************************************************
  * #FUNCTION HEADER BEGIN#
  * NAME     : DOS_setcurrentdir
- * FUNCTION :
+ * FUNCTION : Change the current drive and directory.
  * FILE     : D:\PCLIB32\SRC\BBDOS\BBDOS.C
  * AUTHOR   : Jurie Horneman/Rainer Reber
  * FIRST    : 11.08.95 11:12:03

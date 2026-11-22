@@ -193,61 +193,171 @@ LLC_Set_ink(UNCHAR *Text)
 {
 	Current_text_style.Ink = Get_LLC_nr(Text);
 }
-/* LLC_Set_shadow: text command - set the shadow colour */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_Set_shadow
+ * FUNCTION  : Text command: set the shadow colour.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_Set_shadow(UNCHAR *Text)
 {
 	Current_text_style.Shadow = Get_LLC_nr(Text);
 }
-/* LLC_No_shadow: text command - switch the shadow off */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_No_shadow
+ * FUNCTION  : Text command: switch the shadow off.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_No_shadow(UNCHAR *Text)
 {
 	Current_text_style.Shadow = 0xFFFF;
 }
-/* LLC_Set_normal_style: text command - normal text style */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_Set_normal_style
+ * FUNCTION  : Text command: normal text style.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_Set_normal_style(UNCHAR *Text)
 {
 	Current_text_style.Style = NORMAL_STYLE;
 }
-/* LLC_Set_fat_style: text command - fat text style */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_Set_fat_style
+ * FUNCTION  : Text command: fat text style.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_Set_fat_style(UNCHAR *Text)
 {
 	Current_text_style.Style = FAT_STYLE;
 }
-/* LLC_Set_high_style: text command - high text style */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_Set_high_style
+ * FUNCTION  : Text command: high text style.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_Set_high_style(UNCHAR *Text)
 {
 	Current_text_style.Style = HIGH_STYLE;
 }
-/* LLC_Set_fat_high_style: text command - fat and high text style */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_Set_fat_high_style
+ * FUNCTION  : Text command: fat and high text style.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_Set_fat_high_style(UNCHAR *Text)
 {
 	Current_text_style.Style = FAT_HIGH_STYLE;
 }
-/* LLC_Set_big_style: text command - big text style */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_Set_big_style
+ * FUNCTION  : Text command: big text style.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_Set_big_style(UNCHAR *Text)
 {
 	Current_text_style.Style = BIG_STYLE;
 }
-/* LLC_Set_normal_font: text command - normal font */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_Set_normal_font
+ * FUNCTION  : Text command: normal font.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_Set_normal_font(UNCHAR *Text)
 {
 	Current_text_style.Font = &Normal_font;
 }
-/* LLC_Set_techno_font: text command - techno font */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_Set_techno_font
+ * FUNCTION  : Text command: techno font.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_Set_techno_font(UNCHAR *Text)
 {
 	Current_text_style.Font = &Techno_font;
 }
-/* LLC_Set_capital: text command - start a coloured capital letter */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_Set_capital
+ * FUNCTION  : Text command: start a coloured capital letter.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_Set_capital(UNCHAR *Text)
 {
@@ -256,14 +366,36 @@ LLC_Set_capital(UNCHAR *Text)
 	TEXT_Current_X += 16;
 	Width_without_spaces += 16;
 }
-/* LLC_Unset_capital: text command - end the capital letter */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_Unset_capital
+ * FUNCTION  : Text command: end the capital letter.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_Unset_capital(UNCHAR *Text)
 {
 	Current_text_style.Style = NORMAL_STYLE;
 	Current_text_style.Ink = Textstyle_stack[Textstyle_stack_index]->Ink;
 }
-/* LLC_Default: text command - back to the default text style */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_Default
+ * FUNCTION  : Text command: back to the default text style.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_Default(UNCHAR *Text)
 {
@@ -273,7 +405,18 @@ LLC_Default(UNCHAR *Text)
 	Current_text_style.Shadow = Textstyle_stack[Textstyle_stack_index]->Shadow;
 	Current_text_style.Justification = PRINT_JUSTIFIED;
 }
-/* LLC_HJump: text command - move the cursor to the right */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_HJump
+ * FUNCTION  : Text command: move the cursor to the right.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_HJump(UNCHAR *Text)
 {
@@ -284,7 +427,18 @@ LLC_HJump(UNCHAR *Text)
 	TEXT_Current_X += dX;
 	Width_without_spaces += dX;
 }
-/* LLC_VJump: text command - increase the line spacing */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_VJump
+ * FUNCTION  : Text command: increase the line spacing.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_VJump(UNCHAR *Text)
 {
@@ -295,25 +449,69 @@ LLC_VJump(UNCHAR *Text)
 	if (dY > Current_line_info.Skip)
 		Current_line_info.Skip = dY;
 }
-/* LLC_Set_centered: text command - centred text */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_Set_centered
+ * FUNCTION  : Text command: centred text.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_Set_centered(UNCHAR *Text)
 {
 	Current_text_style.Justification = PRINT_CENTERED;
 }
-/* LLC_Set_left: text command - left-aligned text */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_Set_left
+ * FUNCTION  : Text command: left-aligned text.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_Set_left(UNCHAR *Text)
 {
 	Current_text_style.Justification = PRINT_LEFT;
 }
-/* LLC_Set_right: text command - right-aligned text */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_Set_right
+ * FUNCTION  : Text command: right-aligned text.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_Set_right(UNCHAR *Text)
 {
 	Current_text_style.Justification = PRINT_RIGHT;
 }
-/* LLC_Set_justified: text command - justified text */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : LLC_Set_justified
+ * FUNCTION  : Text command: justified text.
+ * FILE      : TEXTCOMM.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : UNCHAR *Text - Pointer to string (after command).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 LLC_Set_justified(UNCHAR *Text)
 {

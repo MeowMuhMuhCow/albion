@@ -65,7 +65,22 @@ C4_Spell_1_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C4_Spell_1);
 }
-/* Do_C4_Spell_1: class 4 spell 1 - cloud flying to one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C4_Spell_1
+ * FUNCTION  : Class 4 spell 1: cloud flying to one target.
+ * FILE      : COMMAG4.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C4_Spell_1(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -147,7 +162,22 @@ C4_Spell_2_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C4_Spell_2);
 }
-/* Do_C4_Spell_2: class 4 spell 2 - cloud flying to one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C4_Spell_2
+ * FUNCTION  : Class 4 spell 2: cloud flying to one target.
+ * FILE      : COMMAG4.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C4_Spell_2(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -229,7 +259,22 @@ C4_Spell_3_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C4_Spell_3);
 }
-/* Do_C4_Spell_3: class 4 spell 3 - cloud flying to one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C4_Spell_3
+ * FUNCTION  : Class 4 spell 3: cloud flying to one target.
+ * FILE      : COMMAG4.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C4_Spell_3(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
@@ -311,7 +356,22 @@ C4_Spell_4_handler(UNSHORT Strength)
 	/* Do spell for each target */
 	Do_all_magic_combat_targets(Strength, Do_C4_Spell_4);
 }
-/* Do_C4_Spell_4: class 4 spell 4 - cloud flying to one target */
+/*
+ ******************************************************************************
+ * #FUNCTION HEADER BEGIN#
+ * NAME      : Do_C4_Spell_4
+ * FUNCTION  : Class 4 spell 4: cloud flying to one target.
+ * FILE      : COMMAG4.C
+ * AUTHOR    : - (no original header; written for the reconstruction)
+ * INPUTS    : struct Combat_participant *Victim_part - Pointer to victim
+ *              participant data.
+ *             UNSHORT Tactical_X - Tactical X-coordinate of the target.
+ *             UNSHORT Tactical_Y - Tactical Y-coordinate of the target.
+ *             UNSHORT Strength - Strength of spell (1...100).
+ * RESULT    : None.
+ * #FUNCTION HEADER END#
+ */
+
 void
 Do_C4_Spell_4(struct Combat_participant *Victim_part, UNSHORT Tactical_X,
  UNSHORT Tactical_Y, UNSHORT Strength)
