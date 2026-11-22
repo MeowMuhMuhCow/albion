@@ -38,6 +38,7 @@ Einige Befunde unterwegs:
 | `src/ALBION/` | Spiel: `SRC/` (Module), `LIB/` (Kopfdateien), `OUTSIDE/` (Fremdteile, z. B. `ZOOM.ASM`) |
 | `src/PCLIB32/` | Blue-Byte-Bibliothek PCLIB32 (Speicher, Grafik/OPM, DSA, Ereignisse, DOS, System) |
 | `KATALOG.md` | Funktionskatalog: was jede Quelldatei im Spiel macht und was jede Funktion tut |
+| `BUGFIXES.md` | gefundene Fehler des Originals, je Fix ein Schalter im Quelltext und ein Patchwerkzeug (`Werkzeuge/alb_fix.py`) |
 | `Werkzeuge/` | Bauwerkzeuge (Python, Shell), Linkfolge, OMF-/LE-Werkzeuge |
 | `MORGEN.sh` | kompletter Bau in 10 Stufen (OBJs, Daten, Karte, AIL, Assembler, wlink, Vergleich) |
 | `WAECHTER.sh` | startet Bauläufe über eine Auftragsdatei (`Bau/auftrag/start`) |

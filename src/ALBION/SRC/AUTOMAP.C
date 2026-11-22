@@ -2689,6 +2689,10 @@ Insert_automap_events(void)
 												Icon
 											);
 										}
+#ifdef ALB_FIX_AUTOMAP_TRAPS
+										break;	/* Fix: show trap icons only with the spell (see BUGFIXES.md) */
+#endif
+#line 2680
 									}
 									/* Other icons */
 									default:
