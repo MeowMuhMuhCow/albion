@@ -14,7 +14,7 @@ Man übersetzt den Quelltext mit dem historischen **Watcom C 10.0a**, assemblier
 | **Übersetzungseinheiten** | 109 C-Einheiten (Spiel und Blue-Byte-Bibliothek PCLIB32), dazu Assemblerteile und Watcom-Laufzeit |
 | **Funktionen** | rund 2.170 in `MAIN.EXE`, fast alle mit Originalnamen; jede mit Funktionskopf (Zweck, Eingaben, Rückgabe), Übersicht in [`KATALOG.md`](KATALOG.md) |
 | **Übereinstimmung** | 100 %: alle 8 LE-Objekte, Kopf und Fixup-Tabelle; md5 gleich, auch bei einem Bau ohne Zwischenspeicher |
-| **Bugfixes** | 1 Fehler des Originals behoben, als Schalter im Quelltext und als 1-Byte-Patch, siehe unten |
+| **Bugfixes** | 2 Fehler des Originals behoben, als Schalter im Quelltext und als kleiner Patch, siehe unten |
 
 > **Wichtig:** Dieses Repository enthält **keine Spieldaten**, **keine `MAIN.EXE`**, **keinen Compiler** und **nicht** die Rekonstruktion der Miles-Soundbibliothek AIL 3.03 (fremder, kommerzieller Code). Zum Nachbauen braucht man eine eigene legale Kopie von *Albion* (z. B. von [GOG.com](https://www.gog.com/en/game/albion)). Siehe [`RECHTE.md`](RECHTE.md).
 
@@ -31,6 +31,7 @@ python3 Werkzeuge/alb_fix.py MAIN.EXE MAIN_FIX.EXE
 | Fix | Fehler im Original | Wirkung des Fixes |
 |---|---|---|
 | `ALB_FIX_AUTOMAP_TRAPS` | In `AUTOMAP.C` fehlt ein `break;`. Fallen erscheinen deshalb immer auf der Automap, auch ohne den Zauber, der sie zeigen soll. | Fallen sieht man nur noch mit dem Zauber, so wie es vorgesehen war. 1 Byte. |
+| `ALB_FIX_BERSERKER` | Berserker hebt fünf Werte um 50 % an und rechnet sie am Ende zurück. Beide Male wird abgerundet, so verliert jeder ungerade Wert pro Berserker dauerhaft einen Punkt (z. B. Stärke 51 → 76 → 50). | Die Werte kommen exakt zurück. 5 gleich lange Befehlsfolgen in `COMBAT.C`. |
 
 Einzelheiten stehen in [`BUGFIXES.md`](BUGFIXES.md).
 

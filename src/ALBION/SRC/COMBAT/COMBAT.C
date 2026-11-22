@@ -1455,6 +1455,14 @@ Add_temporary_effect(struct Combat_participant *Part, UNSHORT Effect_type,
 
 /* #FUNCTION BEGIN# */
 
+/* Undo the +50 % of the Berserker effect. The original rounds down twice,
+ so every odd value lost one point per Berserker (see BUGFIXES.md). */
+#ifdef ALB_FIX_BERSERKER
+#define BERSERKER_UNDO(v)	((((v) * 2) + 2) / 3)
+#else
+#define BERSERKER_UNDO(v)	(((v) * 100) / 150)
+#endif
+
 void
 Remove_temporary_effect(struct Combat_participant *Part, UNSHORT Effect_type)
 {
@@ -1501,27 +1509,27 @@ Remove_temporary_effect(struct Combat_participant *Part, UNSHORT Effect_type)
 
 				/* Decrease strength skill */
 				Value = Get_real_attribute(Part->Char_handle, STRENGTH);
-				Value = (Value * 100) / 150;
+				Value = BERSERKER_UNDO(Value);
 				Set_attribute(Part->Char_handle, STRENGTH, Value);
 
 				/* Decrease close-range attack skill */
 				Value = Get_real_skill(Part->Char_handle, CLOSE_RANGE_ATTACK);
-				Value = (Value * 100) / 150;
+				Value = BERSERKER_UNDO(Value);
 				Set_skill(Part->Char_handle, CLOSE_RANGE_ATTACK, Value);
 
 				/* Decrease long-range attack skill */
 				Value = Get_real_skill(Part->Char_handle, LONG_RANGE_ATTACK);
-				Value = (Value * 100) / 150;
+				Value = BERSERKER_UNDO(Value);
 				Set_skill(Part->Char_handle, LONG_RANGE_ATTACK, Value);
 
 				/* Decrease critical hit skill */
 				Value = Get_real_skill(Part->Char_handle, CRITICAL_HIT);
-				Value = (Value * 100) / 150;
+				Value = BERSERKER_UNDO(Value);
 				Set_skill(Part->Char_handle, CRITICAL_HIT, Value);
 
 				/* Decrease damage */
 				Char = (struct Character_data *) MEM_Claim_pointer(Part->Char_handle);
-				Char->xDamage = (Char->xDamage * 100) / 150;
+				Char->xDamage = BERSERKER_UNDO(Char->xDamage);
 				MEM_Free_pointer(Part->Char_handle);
 
 				break;
