@@ -1,0 +1,17 @@
+Hier kommt deine eigene Original-MAIN.EXE hinein.
+
+Aus Urheberrechtsgruenden ist KEINE ausfuehrbare Spieldatei in diesem Paket
+enthalten. Bitte kopiere die Datei MAIN.EXE aus deiner eigenen Installation
+von "Albion" (GOG) in diesen Ordner:
+
+  Original/MAIN.EXE
+
+Erwartete Eckdaten:
+  Groesse: 1.109.655 Bytes
+  MD5:     c4171d5eb0ebd36b132e081f8362a075
+
+Wofuer wird sie gebraucht?
+  - Vergleich des Baus mit dem Original (exe_vergleich.py)
+  - Stub (DOS/4GW-Vorspann), Lageplan und Karte der Funktionen
+  - 27 Fuellbytes (fuellbytes.py) und die Reihenfolge der Fixup-Tabelle
+    (fixup_folge.py) werden aus ihr gelesen

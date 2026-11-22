@@ -1,0 +1,1412 @@
+{
+ "VERSION": {
+  "src": "ALBION/SRC/VERSION.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG",
+   "-dALBION_VERSION_NR=1",
+   "-dALBION_SUBVERSION_NR=38"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "MAIN": {
+  "src": "ALBION/SRC/MAIN.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG",
+   "-bt=dos"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "GAME": {
+  "src": "ALBION/SRC/GAME.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "MAP": {
+  "src": "ALBION/SRC/MAP/MAP.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "2D_MAP": {
+  "src": "ALBION/SRC/MAP/2D_MAP.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "2D_COLL": {
+  "src": "ALBION/SRC/MAP/2D_COLL.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "2D_PATH": {
+  "src": "ALBION/SRC/MAP/2D_PATH.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "2D_DISPL": {
+  "src": "ALBION/SRC/MAP/2D_DISPL.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-ox",
+   "-5r"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 12.10.95"
+ },
+ "3D_MAP": {
+  "src": "ALBION/SRC/MAP/3D_MAP.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "3D_PREP": {
+  "src": "ALBION/SRC/MAP/3D_PREP.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "3D_MOVE": {
+  "src": "ALBION/SRC/MAP/3D_MOVE.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "3D_SEL": {
+  "src": "ALBION/SRC/MAP/3D_SEL.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "SPECITEM": {
+  "src": "ALBION/SRC/MAP/SPECITEM.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "ICCHANGE": {
+  "src": "ALBION/SRC/MAP/ICCHANGE.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "MAP_PUM": {
+  "src": "ALBION/SRC/MAP/MAP_PUM.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "ANIMATE": {
+  "src": "ALBION/SRC/ANIMATE.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "XFTYPES": {
+  "src": "ALBION/SRC/XFTYPES.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "SAVELOAD": {
+  "src": "ALBION/SRC/SAVELOAD.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "GRAPHICS": {
+  "src": "ALBION/SRC/GRAPHICS.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "DIAGNOST": {
+  "src": "ALBION/SRC/DIAGNOST.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "INVENTO": {
+  "src": "ALBION/SRC/INVENTO.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "INVLEFT": {
+  "src": "ALBION/SRC/INVLEFT.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "BATFORM": {
+  "src": "ALBION/SRC/BATFORM.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "INVITEMS": {
+  "src": "ALBION/SRC/INVITEMS.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "EXAMITEM": {
+  "src": "ALBION/SRC/EXAMITEM.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "STATAREA": {
+  "src": "ALBION/SRC/STATAREA.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "EVELOGIC": {
+  "src": "ALBION/SRC/EVELOGIC.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "PRTLOGIC": {
+  "src": "ALBION/SRC/PRTLOGIC.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "EVENTS": {
+  "src": "ALBION/SRC/EVENTS.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "QUERMOD": {
+  "src": "ALBION/SRC/QUERMOD.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "NPCS": {
+  "src": "ALBION/SRC/NPCS.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "NPCSOUND": {
+  "src": "ALBION/SRC/NPCSOUND.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "GAMETIME": {
+  "src": "ALBION/SRC/GAMETIME.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "GAMETEXT": {
+  "src": "ALBION/SRC/GAMETEXT.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "DIALOGUE": {
+  "src": "ALBION/SRC/DIALOGUE.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "ITMLOGIC": {
+  "src": "ALBION/SRC/ITMLOGIC.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "COMBAT": {
+  "src": "ALBION/SRC/COMBAT/COMBAT.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "COMACTS": {
+  "src": "ALBION/SRC/COMBAT/COMACTS.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "MONLOGIC": {
+  "src": "ALBION/SRC/COMBAT/MONLOGIC.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "COMSHOW": {
+  "src": "ALBION/SRC/COMBAT/COMSHOW.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "COMOBS": {
+  "src": "ALBION/SRC/COMBAT/COMOBS.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "TACTICAL": {
+  "src": "ALBION/SRC/COMBAT/TACTICAL.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "CHEST": {
+  "src": "ALBION/SRC/CHEST.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "DOOR": {
+  "src": "ALBION/SRC/DOOR.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "AUTOMAP": {
+  "src": "ALBION/SRC/AUTOMAP.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "MAGIC": {
+  "src": "ALBION/SRC/MAGIC.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "SPELLS": {
+  "src": "ALBION/SRC/SPELLS.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "APRES": {
+  "src": "ALBION/SRC/APRES.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "PLACES": {
+  "src": "ALBION/SRC/PLACES.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "MERCHANT": {
+  "src": "ALBION/SRC/MERCHANT.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "CAMP": {
+  "src": "ALBION/SRC/CAMP.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "MAINMENU": {
+  "src": "ALBION/SRC/MAINMENU.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "GOLDFOOD": {
+  "src": "ALBION/SRC/GOLDFOOD.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "SCRIPT": {
+  "src": "ALBION/SRC/SCRIPT.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "SCROLL": {
+  "src": "ALBION/SRC/EXTRA/SCROLL.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-ox",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "XLOAD": {
+  "src": "ALBION/SRC/EXTRA/XLOAD.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "HDOB": {
+  "src": "ALBION/SRC/EXTRA/HDOB.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "GFXFUNC": {
+  "src": "ALBION/SRC/EXTRA/GFXFUNC.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-ox",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "SORT": {
+  "src": "ALBION/SRC/EXTRA/SORT.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-ox",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "FINDCOL": {
+  "src": "ALBION/SRC/EXTRA/FINDCOL.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-ox",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "FLC": {
+  "src": "ALBION/SRC/EXTRA/FLC.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-ox",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "FASTFLC": {
+  "src": "ALBION/SRC/EXTRA/FASTFLC.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-ox",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "FLCVAR": {
+  "src": "ALBION/SRC/EXTRA/FLCVAR.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "CONTROL": {
+  "src": "ALBION/SRC/UI/CONTROL.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "FONT": {
+  "src": "ALBION/SRC/UI/FONT.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "USERFACE": {
+  "src": "ALBION/SRC/UI/USERFACE.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "POPUP": {
+  "src": "ALBION/SRC/UI/POPUP.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "SCROLBAR": {
+  "src": "ALBION/SRC/UI/SCROLBAR.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "ITEMLIST": {
+  "src": "ALBION/SRC/UI/ITEMLIST.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "BUTTONS": {
+  "src": "ALBION/SRC/UI/BUTTONS.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "INPUT": {
+  "src": "ALBION/SRC/UI/INPUT.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "INPUTNR": {
+  "src": "ALBION/SRC/UI/INPUTNR.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "TEXTWIN": {
+  "src": "ALBION/SRC/UI/TEXTWIN.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "MEMBRSEL": {
+  "src": "ALBION/SRC/UI/MEMBRSEL.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "ITEMSEL": {
+  "src": "ALBION/SRC/UI/ITEMSEL.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "BOOLREQ": {
+  "src": "ALBION/SRC/UI/BOOLREQ.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "SELWIN": {
+  "src": "ALBION/SRC/UI/SELWIN.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "COLOURS": {
+  "src": "ALBION/SRC/UI/COLOURS.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "DLLLOAD": {
+  "src": "AIL/AIL_303/DLLLOAD.C",
+  "flags": [
+   "-s"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\AIL\\AIL_303",
+  "gruppe": "ail",
+  "quelle": "AIL/32 1.05 (Miles, freigegeben 2000), Flags noch offen"
+ },
+ "TEXTVAR": {
+  "src": "ALBION/SRC/TEXT/TEXTVAR.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "TEXT": {
+  "src": "ALBION/SRC/TEXT/TEXT.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "TEXTCOMM": {
+  "src": "ALBION/SRC/TEXT/TEXTCOMM.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "TEXTPROC": {
+  "src": "ALBION/SRC/TEXT/TEXTPROC.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "TEXTDISP": {
+  "src": "ALBION/SRC/TEXT/TEXTDISP.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "TEXTGFX": {
+  "src": "ALBION/SRC/TEXT/TEXTGFX.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "TEXTMNG": {
+  "src": "ALBION/SRC/TEXT/TEXTMNG.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "COMMAG0": {
+  "src": "ALBION/SRC/COMMAGIC/COMMAG0.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "COMMAG1": {
+  "src": "ALBION/SRC/COMMAGIC/COMMAG1.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "COMMAG2": {
+  "src": "ALBION/SRC/COMMAGIC/COMMAG2.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "COMMAG3": {
+  "src": "ALBION/SRC/COMMAGIC/COMMAG3.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "COMMAG4": {
+  "src": "ALBION/SRC/COMMAGIC/COMMAG4.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "COMMSUB": {
+  "src": "ALBION/SRC/COMMAGIC/COMMSUB.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "SOUND": {
+  "src": "ALBION/SRC/SOUND.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 05.11.95"
+ },
+ "ZOOMFUNC": {
+  "src": "ALBION/SRC/ZOOMFUNC/ZOOMFUNC.C",
+  "flags": [
+   "-w3"
+  ],
+  "inc": "C:\\ALBION\\LIB_ZOOM1210;C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB;C:\\ALBION\\LIB;C:\\AIL\\AIL_303",
+  "gruppe": "alb",
+  "quelle": "Snapshot 12.10.95"
+ },
+ "BBBASMEM": {
+  "src": "PCLIB32/SRC/BBBASMEM/BBBASMEM.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB",
+  "gruppe": "pcl",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "BBDOS": {
+  "src": "PCLIB32/SRC/BBDOS/BBDOS.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB",
+  "gruppe": "pcl",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "BBDSA": {
+  "src": "PCLIB32/SRC/BBDSA/BBDSA.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB",
+  "gruppe": "pcl",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "BBERROR": {
+  "src": "PCLIB32/SRC/BBERROR/BBERROR.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB",
+  "gruppe": "pcl",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "BBEVENT": {
+  "src": "PCLIB32/SRC/BBEVENT/BBEVENT.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB",
+  "gruppe": "pcl",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "BBMEM": {
+  "src": "PCLIB32/SRC/BBMEM/BBMEM.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB",
+  "gruppe": "pcl",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "BBMEMALO": {
+  "src": "PCLIB32/SRC/BBMEM/BBMEMALO.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB",
+  "gruppe": "pcl",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "BBMEMCHK": {
+  "src": "PCLIB32/SRC/BBMEM/BBMEMCHK.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB",
+  "gruppe": "pcl",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "BBMEMVAR": {
+  "src": "PCLIB32/SRC/BBMEM/BBMEMVAR.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB",
+  "gruppe": "pcl",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "BBOPM": {
+  "src": "PCLIB32/SRC/BBOPM/BBOPM.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB",
+  "gruppe": "pcl",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "BBSYSTEM": {
+  "src": "PCLIB32/SRC/BBSYSTEM/BBSYSTEM.C",
+  "flags": [
+   "-5r",
+   "-omlet",
+   "-w3",
+   "-s",
+   "-dWORDPIXEL"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB",
+  "gruppe": "pcl",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "KEYINTRN": {
+  "src": "PCLIB32/SRC/BBSYSTEM/KEYINTRN.C",
+  "flags": [
+   "-5r",
+   "-omlet",
+   "-w3",
+   "-s",
+   "-dWORDPIXEL"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB",
+  "gruppe": "pcl",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "SINTAB": {
+  "src": "PCLIB32/SRC/BBMTH/SINTAB.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB",
+  "gruppe": "pcl",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "STDMOUSP": {
+  "src": "PCLIB32/SRC/BBSYSTEM/STDMOUSP.C",
+  "flags": [
+   "-5r",
+   "-omlet",
+   "-w3",
+   "-s",
+   "-dWORDPIXEL"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB",
+  "gruppe": "pcl",
+  "quelle": "Snapshot 22.11.95"
+ },
+ "TANTAB": {
+  "src": "PCLIB32/SRC/BBMTH/TANTAB.C",
+  "flags": [
+   "-w1",
+   "-d2",
+   "-od",
+   "-5r",
+   "-dDEBUG"
+  ],
+  "inc": "C:\\WATCOM.10A\\H;C:\\PCLIB32\\LIB",
+  "gruppe": "pcl",
+  "quelle": "Snapshot 22.11.95"
+ }
+}

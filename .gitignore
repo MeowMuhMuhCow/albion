@@ -1,0 +1,39 @@
+# Niemals einchecken: Original-EXE, Spieldaten, Compiler, fremde Bibliotheken
+Original/*
+!Original/HIER_MAIN_EXE_REIN.txt
+Compiler/*
+!Compiler/HIER_COMPILER_REIN.txt
+src/AIL/
+src/WATCOM*/
+Referenz_Horneman/
+Referenz_Miles/
+Werkzeuge/byte-exact-decomp-toolkit/
+
+# Bau- und Arbeitsordner (enthalten Originalbytes)
+Bau/
+Richter/
+Fortschritt/
+logs/
+work/
+_to_delete/
+Analyse/morgen/
+Analyse/*.bin
+Analyse/*.json
+
+# Binaries und Zwischenprodukte
+*.EXE
+*.exe
+*.OBJ
+*.obj
+*.LIB
+*.lib
+*.MAP
+*.map
+*.ERR
+*.err
+*.ISO
+*.iso
+
+# Python
+__pycache__/
+*.py[cod]

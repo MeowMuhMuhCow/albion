@@ -1,0 +1,8 @@
+Hier kommen die historischen Werkzeuge hinein (nicht enthalten):
+
+  Compiler/w100a/   Watcom C/C++ 10.0 mit Patchlevel A (BINB, BINW, BIN, H, LIB386)
+                    Patch ohne DOS anwenden: python3 Werkzeuge/watcom_apatch.py
+  Compiler/ML60/    MASM 6.0 (einrichten mit bash Werkzeuge/masm60.sh)
+
+Der Compiler laeuft beim Bau in einem Emulator (Werkzeuge/emu100a.py, aus dem
+Byte-exact Decomp Toolkit), der Linker und MASM laufen in DOSBox.
