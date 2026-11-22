@@ -20,9 +20,9 @@ Man übersetzt den Quelltext mit dem historischen **Watcom C 10.0a**, assemblier
 
 ---
 
-## Bugfixes
+## Bugfixes für Albion
 
-Mit dem Quelltext lassen sich Fehler des Originals finden und beheben. Jeder Fix liegt hinter einem Schalter (`#ifdef ALB_FIX_...`). Ohne Schalter bleibt `MAIN.EXE` bytegleich. Zum Spielen wendet man die Fixes als kleinen Patch auf eine **Kopie** der eigenen `MAIN.EXE` an:
+Mit dem Quelltext lassen sich Fehler im Original-Albion (Blue Byte, 1995) finden und beheben. Jeder Fix liegt hinter einem Schalter (`#ifdef ALB_FIX_...`). Ohne Schalter bleibt `MAIN.EXE` bytegleich. Zum Spielen wendet man die Fixes als kleinen Patch auf eine **Kopie** der eigenen `MAIN.EXE` an:
 
 ```bash
 python3 Werkzeuge/alb_fix.py MAIN.EXE MAIN_FIX.EXE

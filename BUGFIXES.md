@@ -1,4 +1,4 @@
-# Bugfixes
+# Bugfixes für Albion (MAIN.EXE)
 
 Der Quelltext baut ohne weitere Angaben die unveränderte, bytegleiche `MAIN.EXE`. Jeder Bugfix liegt hinter einem eigenen Schalter (`#ifdef ALB_FIX_...`) und ist damit standardmäßig aus.
 
